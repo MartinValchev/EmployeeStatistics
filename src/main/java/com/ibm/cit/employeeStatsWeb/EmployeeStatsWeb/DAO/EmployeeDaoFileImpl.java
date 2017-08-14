@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee;
 
-public class EmployeeDaoImpl implements EmployeeDao {
+public class EmployeeDaoFileImpl implements EmployeeDao {
 
 	@Override
 	public Employee getEmployee(int id) {
