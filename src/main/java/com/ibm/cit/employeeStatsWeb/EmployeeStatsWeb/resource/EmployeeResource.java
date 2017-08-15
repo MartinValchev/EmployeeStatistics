@@ -73,7 +73,7 @@ public class EmployeeResource {
 		Employee employee = statisticsService.getEmpoyee(employeeId);
 		Response response = null;
 		if (employee == null) {
-			response = Response.status(500).entity("Employee not found!").build();
+			response = Response.status(500).entity("Ivalid id number...").build();
 		} else {
 			GenericEntity<Employee> entity = new GenericEntity<Employee>(employee) {
 			};

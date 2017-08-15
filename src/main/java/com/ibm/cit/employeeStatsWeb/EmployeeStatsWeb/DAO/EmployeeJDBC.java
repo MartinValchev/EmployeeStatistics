@@ -36,8 +36,6 @@ public class EmployeeJDBC {
 			e.printStackTrace();
 			return null;
 
-		} finally {
-			closeConnection(connection);
 		}
 		return connection;
 	}
@@ -65,13 +63,15 @@ public class EmployeeJDBC {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally {
+			closeConnection(connection);
 		}
 
 		return employees;
 
 	}
 
-	public void closeConnection(Connection conn) {
+	private void closeConnection(Connection conn) {
 		if (conn != null) {
 			try {
 				conn.close();

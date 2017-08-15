@@ -3,6 +3,7 @@ package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.StatisticsService;
 import java.util.List;
 
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO.EmployeeDao;
+import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO.EmployeeDaoDBImpl;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO.EmployeeDaoFileImpl;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.EmployeeStatistics;
@@ -10,7 +11,7 @@ import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.EmployeeStatistics;
 public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService {
 
 	public EmployeeStatistics generateNewEmployeesStatistics() {
-		EmployeeDao employeeDao = new EmployeeDaoFileImpl();
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
 		List<Employee> employeeeList = employeeDao.getEmployeeList();
 		Calculations calculations = new CalculationsImpl(employeeeList);
 		EmployeeStatistics empoyeeStatistics = new EmployeeStatistics();
@@ -28,7 +29,7 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 
 	@Override
 	public Employee getEmpoyee(int employeeID) {
-		EmployeeDao employeeDao = new EmployeeDaoFileImpl();
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
 		List<Employee> employeeeList = employeeDao.getEmployeeList();
 		Employee employee = null;
 		for(Employee empl: employeeeList) {
@@ -42,7 +43,7 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 	}
 	@Override
 	public List<Employee> getEmployees() {
-		EmployeeDao employeeDao = new EmployeeDaoFileImpl();
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
 		List<Employee> employeeeList = employeeDao.getEmployeeList();
 		return employeeeList;
 	}

@@ -21,7 +21,6 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		Connection connection = employeeJDBC.startConnection();
 		if (connection != null) {
 			employeeList = employeeJDBC.generateEmployeeList(connection);
-			employeeJDBC.closeConnection(connection);
 		}
 		return employeeList;
 	}
