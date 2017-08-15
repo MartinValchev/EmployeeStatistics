@@ -34,11 +34,8 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<dependency>
-				<groupId>postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-				<version>9.4.1208-jdbc42-atlassian-hosted</version>
-			</dependency>
+			<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
+			
 		</dependencies>
 	</dependencyManagement>
 
@@ -64,6 +61,12 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5</version>
 		</dependency>
+		<dependency>
+				<groupId>postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>9.1-901-1.jdbc4</version>
+			</dependency>
+		
 	</dependencies>
 	<properties>
 		<jersey.version>2.16</jersey.version>
