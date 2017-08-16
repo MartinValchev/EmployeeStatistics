@@ -55,5 +55,25 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		}
 		      return results;
 	}
+	public Employee addEmployee(Employee employee ) {
+		Transaction tx = null;
+		Session session = null;
+		try {
+			SessionFactory sf = new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory();
+			session = sf.openSession();
+			tx = session.beginTransaction();
+		session.save(employee);
+		session.getTransaction().commit();
+
+		} catch (HibernateException e) {
+			if (tx != null) 
+				tx.rollback();
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return employee;
+		
+	}
 	
 }

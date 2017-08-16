@@ -22,4 +22,13 @@ public interface EmployeeDao {
 	 *             List<Employee>
 	 */
 	public List<Employee> getEmployeeList();
+	
+	/**
+	 * provides functionality to add employee to the database
+	 * 
+	 * @param Employee employee
+	 * @throws @return
+	 *             
+	 */
+	public Employee addEmployee(Employee employee );
 }

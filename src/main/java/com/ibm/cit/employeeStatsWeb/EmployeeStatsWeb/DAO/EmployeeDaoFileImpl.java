@@ -25,4 +25,10 @@ public class EmployeeDaoFileImpl implements EmployeeDao {
 		return employeesList;
 	}
 
+	@Override
+	public Employee addEmployee(Employee employee) {
+		return null;
+		
+	}
+
 }

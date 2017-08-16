@@ -41,4 +41,11 @@ public interface EmployeeStatisticsService {
 	 * @return int employeeSize
 	 */
 	int getEmployeeListSize();
+	/**
+	 * add employee to the database return and return it.
+	 * 
+	 * @param Employee employee
+	 * @return Employee employee
+	 */
+	Employee addEmployee(Employee employee);
 }

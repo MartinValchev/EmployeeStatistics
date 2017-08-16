@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO.EmployeeDao;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO.EmployeeDaoDBImpl;
-import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO.EmployeeDaoFileImpl;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.EmployeeStatistics;
 
@@ -53,5 +52,13 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 		
 		return getEmployees().size();
 	}
+
+	@Override
+	public Employee addEmployee(Employee employee) {
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
+		employeeDao.addEmployee(employee);
+		return employee;
+	}
+
 
 }
