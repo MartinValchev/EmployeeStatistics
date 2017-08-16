@@ -1,23 +1,19 @@
 package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
-//@XmlRootElement(name = "Employee")
-@Entity
-@Table(name = "Employee")
-public class Employee {
+public class Employee implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8510114837159475180L;
 	private String employeeFirstName;
 	private String employeeLastName;
 	private double age;
 	private double lengthOfService;
 	private int id;
 
-	@Column(name = "first_name",nullable = false)
 	public String getEmployeeFirstName() {
 		return employeeFirstName;
 	}
@@ -50,8 +46,6 @@ public class Employee {
 		this.lengthOfService = lengthOfService;
 	}
 
-	@Id
-	@Column(name = "id", unique = true, nullable = false)
 	public int getId() {
 		return id;
 	}
