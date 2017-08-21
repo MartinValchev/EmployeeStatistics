@@ -51,7 +51,7 @@ public class EmployeeStatistics {
 		builder.setLength(0);
 		builder.append("Average age of the employees: ").append(String.format("%.2f", getEmployeeAvgAge()))
 				.append("\r\n");
-		builder.append("The first three most common characters in the names of the employees: ")
+		builder.append(" ")
 				.append(getMostCommonChars()).append("\r\n");
 		builder.append("The average length of service of the employees: ")
 				.append(String.format("%.2f", getAvgLengthOfService())).append(" years").append("\r\n");
