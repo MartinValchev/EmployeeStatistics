@@ -23,18 +23,19 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 	@Override
 	public List<Employee> getEmployeeList() {
 		List<Employee> employeeList = null;
-		//EmployeeJDBC employeeJDBC = new EmployeeJDBC();
-		//Connection connection = employeeJDBC.startConnection();
-		//if (connection != null) {
-			//employeeList = employeeJDBC.generateEmployeeList(connection);
-			employeeList = getHibernateEmployeeList();
-		//}
+		// EmployeeJDBC employeeJDBC = new EmployeeJDBC();
+		// Connection connection = employeeJDBC.startConnection();
+		// if (connection != null) {
+		// employeeList = employeeJDBC.generateEmployeeList(connection);
+		employeeList = getHibernateEmployeeList();
+		// }
 		return employeeList;
 	}
-	private List<Employee> getHibernateEmployeeList(){
+
+	private List<Employee> getHibernateEmployeeList() {
 		Transaction tx = null;
 		Session session = null;
-		List<Employee> results =null;
+		List<Employee> results = null;
 		try {
 			SessionFactory sf = new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory();
 			session = sf.openSession();
@@ -42,9 +43,8 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 			String allContactsQuery = "select * FROM Employee";
 			SQLQuery query = session.createSQLQuery(allContactsQuery);
 			query.addEntity(Employee.class);
-			results =  query.list();
+			results = query.list();
 			tx.commit();
-			
 
 		} catch (HibernateException e) {
 			if (tx != null)
@@ -53,27 +53,41 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} finally {
 			session.close();
 		}
-		      return results;
+		return results;
 	}
-	public Employee addEmployee(Employee employee ) {
+
+	public Employee addEmployee(Employee employee) {
 		Transaction tx = null;
 		Session session = null;
+		SessionFactory sf = null;
+		Employee currentEmpl = null;
 		try {
-			SessionFactory sf = new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory();
+			sf = new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory();
 			session = sf.openSession();
 			tx = session.beginTransaction();
-		session.save(employee);
-		session.getTransaction().commit();
-
+			session.save(employee);
+			session.getTransaction().commit();		
+			currentEmpl = getNewlyCreatedEmployee(session);
 		} catch (HibernateException e) {
-			if (tx != null) 
+			if (tx != null)
 				tx.rollback();
 			e.printStackTrace();
 		} finally {
 			session.close();
+			sf.close();
 		}
-		return employee;
-		
+		return currentEmpl;
+
 	}
-	
+	private Employee getNewlyCreatedEmployee(Session session) {
+		List<Employee> results = null;
+			Transaction tx = session.beginTransaction();
+			String allContactsQuery = "SELECT * FROM Employee ORDER BY ID DESC limit 1";
+			SQLQuery query = session.createSQLQuery(allContactsQuery);
+			session.getTransaction().commit();		
+			query.addEntity(Employee.class);
+			results = query.list();
+		return results.get(0);
+	}
+
 }

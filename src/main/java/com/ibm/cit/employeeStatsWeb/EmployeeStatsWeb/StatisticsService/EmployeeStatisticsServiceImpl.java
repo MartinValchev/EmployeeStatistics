@@ -56,8 +56,8 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 	@Override
 	public Employee addEmployee(Employee employee) {
 		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
-		employeeDao.addEmployee(employee);
-		return employee;
+		Employee empl = employeeDao.addEmployee(employee);
+		return empl;
 	}
 
 

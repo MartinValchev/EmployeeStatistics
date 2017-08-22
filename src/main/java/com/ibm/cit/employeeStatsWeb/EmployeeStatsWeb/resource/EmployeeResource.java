@@ -86,7 +86,7 @@ public class EmployeeResource {
 	
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
-	public Employee addMessage(Employee employee) {
+	public Employee addEmployee(Employee employee) {
 		EmployeeStatisticsService statisticsService = new EmployeeStatisticsServiceImpl();
 		return statisticsService.addEmployee(employee);
 		
