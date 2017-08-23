@@ -84,8 +84,11 @@ public class EmployeeResource {
 		return response;
 	}
 	
+
 	@POST
+	@Path("/add")
 	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
 	public Response addEmployee(Employee employee) {
 		Response response = null;
 		EmployeeStatisticsService statisticsService = new EmployeeStatisticsServiceImpl();
