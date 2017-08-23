@@ -86,9 +86,19 @@ public class EmployeeResource {
 	
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
-	public Employee addEmployee(Employee employee) {
+	public Response addEmployee(Employee employee) {
+		Response response = null;
 		EmployeeStatisticsService statisticsService = new EmployeeStatisticsServiceImpl();
-		return statisticsService.addEmployee(employee);
+		Employee resultEmpl =statisticsService.addEmployee(employee);
+		if (employee == null) {
+			response = Response.status(500).entity("Employee record not retrieved correctly").build();
+		} else {
+			GenericEntity<Employee> entity = new GenericEntity<Employee>(resultEmpl) {
+			};
+			response = Response.status(200).entity(entity).build();
+		}
+
+		return response; 
 		
 	}
 
