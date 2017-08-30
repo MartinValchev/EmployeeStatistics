@@ -2,6 +2,7 @@ package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.resource;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -12,6 +13,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Request;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
@@ -79,7 +81,10 @@ public class EmployeeResource {
 			GenericEntity<Employee> entity = new GenericEntity<Employee>(employee) {
 			};
 			response = Response.status(200).entity(entity).build();
+			
 		}
+		
+		
 
 		return response;
 	}
