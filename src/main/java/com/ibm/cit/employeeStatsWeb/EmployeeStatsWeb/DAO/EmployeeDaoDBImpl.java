@@ -7,7 +7,6 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee;
 
@@ -36,8 +35,9 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		Transaction tx = null;
 		Session session = null;
 		List<Employee> results = null;
+		SessionFactory sf = null;
 		try {
-			SessionFactory sf = new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory();
+			sf =SessionFactoryGenerator.getSessionFactoryInstance();
 			session = sf.openSession();
 			tx = session.beginTransaction();
 			String allContactsQuery = "select * FROM Employee";
@@ -62,7 +62,7 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		SessionFactory sf = null;
 		Employee currentEmpl = null;
 		try {
-			sf = new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory();
+			sf =SessionFactoryGenerator.getSessionFactoryInstance();
 			session = sf.openSession();
 			tx = session.beginTransaction();
 			session.save(employee);
