@@ -38,7 +38,8 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		SessionFactory sf = null;
 		try {
 			sf =SessionFactoryGenerator.getSessionFactoryInstance();
-			session = sf.openSession();
+			//session = sf.openSession();
+			session = sf.getCurrentSession();
 			tx = session.beginTransaction();
 			String allContactsQuery = "select * FROM Employee";
 			SQLQuery query = session.createSQLQuery(allContactsQuery);
@@ -51,7 +52,7 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 				tx.rollback();
 			e.printStackTrace();
 		} finally {
-			session.close();
+			//session.close();
 		}
 		return results;
 	}
@@ -63,7 +64,8 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		Employee currentEmpl = null;
 		try {
 			sf =SessionFactoryGenerator.getSessionFactoryInstance();
-			session = sf.openSession();
+			//session = sf.openSession();
+			session = sf.getCurrentSession();
 			tx = session.beginTransaction();
 			session.save(employee);
 			session.getTransaction().commit();		
@@ -73,8 +75,7 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 				tx.rollback();
 			e.printStackTrace();
 		} finally {
-			session.close();
-			sf.close();
+			//session.close();
 		}
 		return currentEmpl;
 

@@ -10,19 +10,14 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.Cookie;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.StatisticsService.EmployeeStatisticsService;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.StatisticsService.EmployeeStatisticsServiceImpl;
-import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.StatisticsService.UserLoginService;
-import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.StatisticsService.UserLoginServiceImpl;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee;
-import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken;
 
 @Path("secured/employees")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -37,11 +32,11 @@ public class EmployeeResource {
 		Response response = null;
 		ResponseBuilder rb = null;
 		// Cooking add
-		UserLoginService loginService = new UserLoginServiceImpl();
+		/*UserLoginService loginService = new UserLoginServiceImpl();
 		LoginToken lastLoginToken = loginService.getLoginToken("");
 		String tokenString = lastLoginToken.getHashToken();
 		Cookie cookieToken = new Cookie("token_id", tokenString);
-		NewCookie newCookieToken = new NewCookie(cookieToken);
+		NewCookie newCookieToken = new NewCookie(cookieToken); */
 		if (markerId > 0) {
 			List<Employee> shrinkedList = new ArrayList<>();
 			for (Employee empl : employees) {
@@ -52,7 +47,7 @@ public class EmployeeResource {
 			GenericEntity<List<Employee>> entity = new GenericEntity<List<Employee>>(shrinkedList) {
 			};
 
-			rb = Response.ok(entity, MediaType.APPLICATION_JSON).cookie(newCookieToken);
+			rb = Response.ok(entity, MediaType.APPLICATION_JSON);
 		} else if (start > 0 & size > 0) {
 			List<Employee> shrinkedList = new ArrayList<>();
 			for (Employee empl : employees) {
@@ -65,13 +60,13 @@ public class EmployeeResource {
 			}
 			GenericEntity<List<Employee>> shrinkEntity = new GenericEntity<List<Employee>>(shrinkedList) {
 			};
-			rb = Response.ok(shrinkEntity, MediaType.APPLICATION_JSON).cookie(newCookieToken);
+			rb = Response.ok(shrinkEntity, MediaType.APPLICATION_JSON);
 
 		} else {
 
 			GenericEntity<List<Employee>> entity = new GenericEntity<List<Employee>>(employees) {
 			};
-			rb = Response.ok(entity, MediaType.APPLICATION_JSON).cookie(newCookieToken);
+			rb = Response.ok(entity, MediaType.APPLICATION_JSON);
 
 		}
 
@@ -91,12 +86,12 @@ public class EmployeeResource {
 		} else {
 			GenericEntity<Employee> entity = new GenericEntity<Employee>(employee) {
 			};
-			UserLoginService loginService = new UserLoginServiceImpl();
+		/*	UserLoginService loginService = new UserLoginServiceImpl();
 			LoginToken lastLoginToken = loginService.getLoginToken("");
 			String tokenString = lastLoginToken.getHashToken();
 			Cookie cookieToken = new Cookie("token_id", tokenString);
-			NewCookie newCookieToken = new NewCookie(cookieToken);
-			response = Response.status(200).entity(entity).cookie(newCookieToken).build();
+			NewCookie newCookieToken = new NewCookie(cookieToken); */
+			response = Response.status(200).entity(entity).build();
 
 		}
 
@@ -117,12 +112,12 @@ public class EmployeeResource {
 		} else {
 			GenericEntity<Employee> entity = new GenericEntity<Employee>(resultEmpl) {
 			};
-			UserLoginService loginService = new UserLoginServiceImpl();
+		/*	UserLoginService loginService = new UserLoginServiceImpl();
 			LoginToken lastLoginToken = loginService.getLoginToken("");
 			String tokenString = lastLoginToken.getHashToken();
 			Cookie cookieToken = new Cookie("token_id", tokenString);
-			NewCookie newCookieToken = new NewCookie(cookieToken);
-			response = Response.status(200).entity(entity).cookie(newCookieToken).build();
+			NewCookie newCookieToken = new NewCookie(cookieToken); */
+			response = Response.status(200).entity(entity).build();
 		}
 
 		return response;
