@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class  table="login" lazy="false" name="com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login">
+          <id name="loginId" type="int" column="login_id">
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string" not-null="true" column="username"  />
+
+         <property name="password" type="string" not-null="true" column ="password" />
+		<set name="loginTokens" table="logintoken"
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="login_id" not-null="true" />
+            </key>
+            <one-to-many class="com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken" />
+        </set>
+    </class>
+</hibernate-mapping>

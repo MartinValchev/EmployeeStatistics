@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+<head>
+<title>All Employees List</title>
+<link rel="stylesheet" href ="css/stylesheet-main.css"/>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/employeeTemplate.js"></script>
+	<script src="js/mustache.js"></script>
+	<script src="js/allEmployees.js"></script>
+</head>
+<body>
+	<div id="allEmployees">
+		<h2 class="pageHeading">All Employees List</h2>
+		<ul id="employeesList">
+		</ul>
+		<template id='employees-template'>
+		<li class="empl-row">
+			<p data-id='{{id}}'>
+				<strong>ID: {{id}}</strong>
+			</p>
+			<p class="first-name">
+				<strong> First name: {{firstName}}</strong>
+			</p>
+			<p class="last-name">
+				<strong> Last name:{{lastName}}</strong>
+			</p>
+			<p class="age">
+				<strong> Age: {{age}}</strong>
+			</p>
+			<p class="length-of-service">
+				<strong> Length of service: {{lengthOfService}}</strong>
+			</p>
+		</li>
+		</template>	
+	</div>
+	<button id="return-btn" class="btn" onclick="location.href = 'index.html'">Return</button>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken" table="logintoken" >        
+         <id name="loginTokenId" type="int">
+            <column name="login_token_id" />
+            <generator class="identity" />
+        </id>
+         <many-to-one name="login" class="com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login" fetch="select">
+            <column name="login_id" not-null="true" />
+        </many-to-one>
+
+        <property name="hashToken" type="string" column="hash_token"  />
+
+        <property name="expirationDate" type="timestamp" column ="expiration_date" />
+
+    </class>
+</hibernate-mapping>
+

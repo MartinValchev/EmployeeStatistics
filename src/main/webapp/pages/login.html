@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="css/stylesheet-main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header"></div>
+		<h2>@FormQuery Login To EmployeesInfo</h2>
+		<form name="login"  method="POST" class="loginForm" action="http://localhost:8080/EmployeeStatsWeb/webapi/login">
+			<ul>
+				<li>Username: <input class="username" type="text" name="username"/></li>
+				<li>Password:  <input class="password" type="password" name="password"/></li>
+				</ul>
+				<input id="login-btn" class="btn" type="submit" value="Submit">
+			</form>	
+	</div>
+	<!--  <script src="js/jquery-3.2.1.js"></script>
+	<script src="js//md5.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/userTemplate.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Statistics</title>
+<link rel="stylesheet" href ="css/stylesheet-main.css"/>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/statistics.js"></script>
+	<script src="js/statisticsTemplate.js"></script>
+	<script src="js/mustache.js"></script>
+</head>
+<body>
+	<header>
+		<h2 class="pageHeading">Employee Statistics</h2>
+
+	</header>
+	<div id="employee-stats">
+		<ul id="statistics">
+		</ul>
+		<template id="statistics-template">
+		<li class="statistics-row"><p class="employeeAvgAge">
+				<strong> Employee Average Age:</strong> {{employeeAvgAge}}
+			</p></li>
+		<li class="statistics-row"><p class="mostCommonChars">
+				<strong> Most Common Chars: </strong>{{mostCommonChars}}
+			</p></li>
+		<li class="statistics-row"><p class="avgLengthOfService">
+				<strong> Average Length of Service: </strong>{{avgLengthOfService}}
+			</p></li>
+		<li class="statistics-row"><p class="maxLengthOfService">
+				<strong> Max Length of service: </strong>{{maxLengthOfService}}
+			</p></li>
+		</template>
+	</div>
+
+	<button id="return-btn" class="btn" onclick="location.href = 'index.html'">Return</button>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class  table="Employee" lazy="false" name="com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee">
+        <id name="id" type="int" column="id">
+            <generator class="increment" />
+        </id>
+        <property name="employeeFirstName" type="string" column="first_name"  />
+
+         <property name="employeeLastName" type="string" column ="last_name" />
+
+        <property name="age" type="double" column ="age" />
+
+        <property name="lengthOfService" type="double" column="length_of_service" />
+
+    </class>
+</hibernate-mapping>
+
