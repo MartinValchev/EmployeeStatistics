@@ -44,13 +44,13 @@ $('form.loginForm').on('submit', function() {
 			//console.log(response); 
 			if(isLoginValid){
 				console.log(response);
-				alert('Login Successfult');
+				console.log('Login Successfult');
 				
 				document.location.href=requestUrl;
 			}
 		},
 		error: function(){
-			alert('Login request not processed correctly');
+			console.log('Login request not processed correctly');
 		}
 	});
 	

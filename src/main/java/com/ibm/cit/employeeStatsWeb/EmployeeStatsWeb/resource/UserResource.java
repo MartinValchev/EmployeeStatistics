@@ -50,7 +50,7 @@ public class UserResource {
 				String pageUrl = pageCookie.getValue();
 				response = Response.seeOther(URI.create(pageUrl)).cookie(newToken_cookie).build();
 			} else {
-				response = Response.seeOther(URI.create("http://localhost:8080/EmployeeStatsWeb/pages/index.html"))
+				response = Response.seeOther(URI.create("http://localhost:8080/EmployeeStatsWeb/pages/home.html"))
 						.cookie(newToken_cookie).build();
 			}
 			return response;
@@ -60,7 +60,7 @@ public class UserResource {
 		}
 	}
 
-	@Path("/tokenCheck")
+	@Path("/secured/index")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response getTokenResponse(@CookieParam("token_id") Cookie cookie) {

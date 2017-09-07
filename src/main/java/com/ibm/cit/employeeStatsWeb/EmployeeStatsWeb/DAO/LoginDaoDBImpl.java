@@ -128,7 +128,9 @@ public class LoginDaoDBImpl implements LoginDao {
 			loginToken.setLogin(login);
 			login.getLoginTokens().add(loginToken);
 			session.saveOrUpdate(loginToken);
-			tx.commit();
+			if (!tx.wasCommitted()) {
+			    tx.commit();
+			}	
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
@@ -157,7 +159,7 @@ public class LoginDaoDBImpl implements LoginDao {
 				tx.rollback();
 			e.printStackTrace();
 		} finally {
-			session.close();
+			//session.close();
 			//sf.close();
 		}
 

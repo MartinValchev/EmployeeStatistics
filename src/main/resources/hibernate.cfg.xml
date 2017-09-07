@@ -10,6 +10,8 @@
   <property name="hibernate.connection.password">Postgre12@</property>
   <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
   <property name="hibernate.current_session_context_class">thread</property>
+  <property name="hibernate.jdbc.use_get_generated_keys">true</property>
+  <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
 <!--  <property name="hibernate.default_schema">public</property> -->
   <property name="show_sql">true</property>
   <mapping resource="com/cit/employee/Employee.hbm.xml"></mapping>

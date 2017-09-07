@@ -3,10 +3,11 @@
 <head>
 <title>Get Employee</title>
 <link rel="stylesheet" href ="css/stylesheet-main.css"/>
-<script src="js/jquery-3.2.1.js"></script>
+<script src="js/jquery-3.2.1.js"></script>	
 	<script src="js/getEmployee.js"></script>
 	<script src="js/employeeTemplate.js"></script>
 	<script src="js/mustache.js"></script>
+
 	
 </head>
 <body>
@@ -17,7 +18,7 @@
 	<br>
 	<p class="info">Type Employee ID<p>
 	<input class="input" type="text" id="employeeId">
-	<input class="btn"  id="get-Employee" type="submit" value="Submit">
+	<button id="get-Employee" class="btn" onclick="getEmployee()">Submit</button>	
 	<button class="btn" type="reset" id="resetField">Reset</button>
 	<br>
 	<div id="employee-info">
@@ -43,7 +44,7 @@
 			</p></li>
 		</template>
 	</div>
-	<button id="return-btn" class="btn" onclick="location.href = 'index.html'">Return</button>
+	<button id="return-btn" class="btn" onclick="location.href = 'home.html'">Return</button>
 	
 
 

@@ -2,31 +2,53 @@
 <html>
 <head>
 <title>Add Employee</title>
-<link rel="stylesheet" href ="css/stylesheet-main.css"/>
-		<script src="js/jquery-3.2.1.js"></script>
-		<script src="js/employeeTemplate.js"></script>
-		<script src="js/mustache.js"></script>
-		<script type="text/javascript" src="js/addEmployee.js"></script>
-		
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/employeeTemplate.js"></script>
+<script src="js/mustache.js"></script>
+<script src="js/addEmployee.js"></script>
+
 </head>
 <body>
 
-	<h2 class="pageHeading">Add Employee</h2>
-	<p class="info">First name:</p>
-	<input class="input" type="text" id="employeeFirstName">
-	<p class="info">Last name:</p>
-	<input class="input" type="text" id="employeeLastName">
-	<p class="info">Age:</p>
-	<input class="input" type="text" id="age">
-	<p class="info">Length of Service:</p>
-	<input class="input" type="text" id="lengthOfService">
-	<br/>
-	<br/>
-	<input id="add-Employee" class="btn" type="submit" value="Submit">
-	<button id="return-btn" class="btn" onclick="location.href = 'index.html'">Return</button>
-	<p id="output">
-				<div id="employee-added">
-		<ul id="employee-list">
+	<div class="jumbotron">
+		<h2 class="pageHeading">Add Employee</h2>
+	</div>
+		<form class="form-horizontal">
+			<div class="col-sm-10">
+				<label class="control-label col-sm-2" for="employeeFirstName">First
+					Name:</label> <input class="input" type="text" id="employeeFirstName">
+
+			</div>
+			<div class="col-sm-10">
+				<label class="control-label col-sm-2" for="employeeLastName">Last
+					Name:</label> <input class="input" type="text" id="employeeLastName">
+			</div>
+			<div class="col-sm-10">
+				<label class="control-label col-sm-2" for="age">Age:</label> <input
+					class="input" type="text" id="age">
+			</div>
+			<div class="col-sm-10">
+				<label class="control-label col-sm-2" for="lengthOfService">Length
+					of Service:</label> <input class="input" type="text" id="lengthOfService">
+			</div>
+			<br />
+			<br />
+			<div class="col-sm-10">
+				<br /> <label class="control-label col-sm-2" for="add-Employee"></label>
+				<button id="add-Employee" class="btn btn-success"
+					onclick="addEmployee()">Submit</button>
+					<a href="home.html" class="btn btn-info" type="submit" id="return">
+						Return</a>
+			</a>
+		</form>
+	
+
+	<div class="panel panel-default" id="employee-added">
+		<ul class="panel panel-default" id="employee-list">
 		</ul>
 		<template id='employee-template'>
 		<li class="edit">
@@ -48,8 +70,8 @@
 			</p></li>
 		</template>
 	</div>
-	</p>
+	
 
-		
+
 </body>
 </html>

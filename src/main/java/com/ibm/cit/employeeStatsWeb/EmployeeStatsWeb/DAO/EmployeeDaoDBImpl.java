@@ -63,13 +63,16 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		SessionFactory sf = null;
 		Employee currentEmpl = null;
 		try {
+
 			sf =SessionFactoryGenerator.getSessionFactoryInstance();
 			//session = sf.openSession();
 			session = sf.getCurrentSession();
 			tx = session.beginTransaction();
 			session.save(employee);
-			session.getTransaction().commit();		
-			currentEmpl = getNewlyCreatedEmployee(session);
+			if (!tx.wasCommitted()) {
+			    tx.commit();
+			}		
+			currentEmpl = getNewlyCreatedEmployee();
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
@@ -80,14 +83,23 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		return currentEmpl;
 
 	}
-	private Employee getNewlyCreatedEmployee(Session session) {
+	private Employee getNewlyCreatedEmployee() {
+		Transaction tx = null;
+		Session session = null;
+		SessionFactory sf = null;
 		List<Employee> results = null;
-			Transaction tx = session.beginTransaction();
+		sf =SessionFactoryGenerator.getSessionFactoryInstance();
+			session = sf.getCurrentSession();
+			tx = session.beginTransaction();
 			String allContactsQuery = "SELECT * FROM Employee ORDER BY ID DESC limit 1";
 			SQLQuery query = session.createSQLQuery(allContactsQuery);
-			session.getTransaction().commit();		
+				
 			query.addEntity(Employee.class);
 			results = query.list();
+			if (!tx.wasCommitted()) {
+			    tx.commit();
+			}
+		
 		return results.get(0);
 	}
 
