@@ -3,27 +3,41 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
-<link rel="stylesheet" type="text/css" href="css/stylesheet-main.css">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="container">
-		<div class="header"></div>
-		<h2>Login To EmployeesInfo</h2>
-		<div>
-			<p>Welcome to Employees Statistics web application</p>
-			<p>In order to access Employees Statistics resources please log in</p>
+		<div class="jumbotron">
+			<h2>Login Employees Application</h2>
 		</div>
-		<form name="login"  method="POST" class="loginForm" action="http://localhost:8080/EmployeeStatsWeb/webapi/login">
-			<ul>
-				<li>Username: <input class="username" type="text" name="username"/></li>
-				<li>Password:  <input class="password" type="password" name="password"/></li>
-				</ul>
-				<input id="login-btn" class="btn" type="submit" value="Submit">
-			</form>	
+		<div class="container">	
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<p>Welcome to Employees Statistics web application</p>
+					<p>In order to access Employees Statistics resources please log
+						in</p>
+				</div>
+			</div>
+			<div class="panel panel-default">
+			<br/>
+			<form name="login" method="POST" class="loginForm"
+				action="http://localhost:8080/EmployeeStatsWeb/webapi/login">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="user_name">Username:</label>
+					<input class="username" type="text" name="username" id="user_name" />
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="pass_word">Password:</label><input
+						class="password" type="password" id="pass_word" name="password" />
+				</div>
+				<input id="login-btn" class="btn btn-success" type="submit"
+					value="Submit">
+			</form>
+			</div>
+		</div>
 	</div>
-	<!--  <script src="js/jquery-3.2.1.js"></script>
-	<script src="js//md5.js"></script>
-	<script src="js/login.js"></script>
-	<script src="js/userTemplate.js"></script>-->
 </body>
 </html>
