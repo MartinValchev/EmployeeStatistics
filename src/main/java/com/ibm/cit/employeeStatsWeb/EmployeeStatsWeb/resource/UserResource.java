@@ -41,16 +41,16 @@ public class UserResource {
 			Date expirationDate = new Date();
 			// set expiration time to 15 min
 			expirationDate = new Date(expirationDate.getTime() + 15 * 60 * 1000);
-			Cookie cookieToken = new Cookie("token_id", token);
 			loginService.addLoginToken(token, expirationDate, user);
-			NewCookie newToken_cookie = new NewCookie(cookieToken, "", 900, expirationDate, false, true);
+			NewCookie newToken_cookie = new NewCookie("token_id",token,"/","localhost",1,"token id cookie",900,expirationDate,false,true);
+			NewCookie newUser_cookie = new NewCookie("logged_user",username,"/","localhost",1,"username cookie",900,expirationDate,false,false);
 			GenericEntity<String> entity = new GenericEntity<String>(loginResponse) {
 			};
 			if (pageCookie != null) {
 				String pageUrl = pageCookie.getValue();
-				response = Response.seeOther(URI.create(pageUrl)).cookie(newToken_cookie).build();
+				response = Response.seeOther(URI.create(pageUrl)).cookie(newToken_cookie).cookie(newUser_cookie).build();
 			} else {
-				response = Response.seeOther(URI.create("http://localhost:8080/EmployeeStatsWeb/pages/home.html"))
+				response = Response.seeOther(URI.create("http://localhost:8080/EmployeeStatsWeb/pages/home.html")).cookie(newUser_cookie)
 						.cookie(newToken_cookie).build();
 			}
 			return response;

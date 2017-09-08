@@ -3,39 +3,71 @@
 <head>
 <title>All Employees List</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/employeeTemplate.js"></script>
 <script src="js/mustache.js"></script>
 <script src="js/allEmployees.js"></script>
+<script src="js/cookieFunctions.js"></script>
+<script src="js/homePage.js"></script>
 </head>
 <body>
 	<div class="jumbotron" id="allEmployees">
 		<h2 class="pageHeading">All Employees List</h2>
 	</div>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">EmployeePage</a>
+			</div>
+			<ul class="nav navbar-nav" id="mainMenu">
+				<li><a data-toggle="tab" href="">Home</a></li>
+				<li><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('AddEmployee.html')" id="addEmployee">Add
+						Employee</a></li>
+				<li class="active"><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('AllEmployees.html')"
+					id="allEmployee">All Employees List</a></li>
+				<li><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('Employee.html')" type="submit"
+					id="specEmployee"> Get Specific Employee</a></li>
+				<li><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('Statistics.html')" id="statisticsN">
+						Employee Statistics</a></li>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a id="logged_user" href="#"><span
+						class="glyphicon glyphicon-user"></span> User</a></li>
+				<li><a id="logout" href="#"><span
+						class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+			</ul>
+		</div>
+	</nav>
 	<div class="container">
 		<ul id="employeesList" class="list-group">
 		</ul>
-		
+
 		<template id="employees-template">
-			<li class="list-group-item">
-				<p data-id='{{id}}'>
-					<strong>ID: </strong> {{id}}
-				</p>
-				<p class="first-name">
-					<strong> First name:</strong> {{firstName}}
-				</p>
-				<p class="last-name">
-					<strong> Last name:</strong>{{lastName}}
-				</p>
-				<p class="age">
-					<strong> Age:</strong> {{age}}
-				</p>
-				<p class="length-of-service">
-					<strong> Length of service:</strong> {{lengthOfService}}
-				</p>
-			</li>
+		<li class="list-group-item">
+			<p data-id='{{id}}'>
+				<strong>ID: </strong> {{id}}
+			</p>
+			<p class="first-name">
+				<strong> First name:</strong> {{firstName}}
+			</p>
+			<p class="last-name">
+				<strong> Last name:</strong>{{lastName}}
+			</p>
+			<p class="age">
+				<strong> Age:</strong> {{age}}
+			</p>
+			<p class="length-of-service">
+				<strong> Length of service:</strong> {{lengthOfService}}
+			</p>
+		</li>
 		</template>
-		
+
 	</div>
 
 	<button id="return-btn" class="btn"

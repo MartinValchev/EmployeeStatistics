@@ -4,6 +4,7 @@
 <meta charset="ISO-8859-1">
 <title>Statistics</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/popper.min.js"></script>
@@ -11,6 +12,8 @@
 <script src="js/statisticsTemplate.js"></script>
 <script src="js/mustache.js"></script>
 <script src="js/statistics.js"></script>
+<script src="js/cookieFunctions.js"></script>
+<script src="js/homePage.js"></script>
 
 </head>
 <body>
@@ -19,10 +22,39 @@
 			<h2 class="pageHeading">Employee Statistics</h2>
 		</div>
 	</header>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">EmployeePage</a>
+			</div>
+			<ul class="nav navbar-nav" id="mainMenu">
+				<li ><a data-toggle="tab" href="">Home</a></li>
+				<li><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('AddEmployee.html')" id="addEmployee">Add
+						Employee</a></li>
+				<li><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('AllEmployees.html')"
+					id="allEmployee">All Employees List</a></li>
+				<li><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('Employee.html')" type="submit"
+					id="specEmployee"> Get Specific Employee</a></li>
+				<li class="active"><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('Statistics.html')" id="statisticsN">
+						Employee Statistics</a></li>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a id="logged_user" href="#"><span
+						class="glyphicon glyphicon-user"></span> User</a></li>
+				<li><a id="logout" href="#"><span
+						class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+			</ul>
+		</div>
+	</nav>
 	<div id="employee-stats" class="list-group">
-		<ul  class="list-group" id="statistics">
+		<ul class="list-group" id="statistics">
 		</ul>
-		
+
 		<template id="statistics-template">
 		<li class="list-group-item"><p class="employeeAvgAge">
 				<strong> Employee Average Age:</strong> {{employeeAvgAge}}
@@ -38,10 +70,10 @@
 			</p></li>
 		</template>
 		<a href="home.html" class="btn btn-info" type="submit" id="return">
-				Return</a>
+			Return</a>
 	</div>
 
-	
+
 
 </body>
 </html>

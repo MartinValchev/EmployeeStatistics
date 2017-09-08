@@ -3,6 +3,7 @@
 <head>
 <title>Add Employee</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/popper.min.js"></script>
@@ -10,13 +11,46 @@
 <script src="js/employeeTemplate.js"></script>
 <script src="js/mustache.js"></script>
 <script src="js/addEmployee.js"></script>
+<script src="js/cookieFunctions.js"></script>
+<script src="js/homePage.js"></script>
 
 </head>
 <body>
-
-	<div class="jumbotron">
+	<div class="jumbotron" id="heading">
 		<h2 class="pageHeading">Add Employee</h2>
 	</div>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">EmployeePage</a>
+			</div>
+			<ul class="nav navbar-nav" id="mainMenu">
+				<li ><a data-toggle="tab" href="">Home</a></li>
+				<li><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('AddEmployee.html')" id="addEmployee">Add
+						Employee</a></li>
+				<li><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('AllEmployees.html')"
+					id="allEmployee">All Employees List</a></li>
+				<li><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('Employee.html')" type="submit"
+					id="specEmployee"> Get Specific Employee</a></li>
+				<li class="active"><a data-toggle="tab" href="#"
+					onclick="setRequestPageCookie('Statistics.html')" id="statisticsN">
+						Employee Statistics</a></li>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a id="logged_user" href="#"><span
+						class="glyphicon glyphicon-user"></span> User</a></li>
+				<li><a id="logout" href="#"><span
+						class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="tab-pane fade in active" id="contentPage">
+
 		<form class="form-horizontal">
 			<div class="col-sm-10">
 				<label class="control-label col-sm-2" for="employeeFirstName">First
@@ -35,43 +69,42 @@
 				<label class="control-label col-sm-2" for="lengthOfService">Length
 					of Service:</label> <input class="input" type="text" id="lengthOfService">
 			</div>
-			<br />
-			<br />
+			<br /> <br />
 			<div class="col-sm-10">
 				<br /> <label class="control-label col-sm-2" for="add-Employee"></label>
 				<button id="add-Employee" class="btn btn-success"
 					onclick="addEmployee()">Submit</button>
-					<a href="home.html" class="btn btn-info" type="submit" id="return">
-						Return</a>
+				<a href="home.html" class="btn btn-info" type="submit" id="return">
+					Return</a>
 			</div>
 		</form>
-	
 
-	<div class="panel panel-default" id="employee-added">
-		<ul class="panel panel-default" id="employee-list">
-		</ul>
-		<template id='employee-template'>
-		<li class="edit">
-			<p data-id='{{id}}'>
-				<strong>ID:</strong> {{id}}
-			</p>
-		</li>
-		<li class="empl-row"><p class="first-name">
-				<strong> First name:</strong> {{firstName}}
-			</p></li>
-		<li class="empl-row"><p class="last-name">
-				<strong> Last name:</strong> {{lastName}}
-			</p></li>
-		<li class="empl-row"><p class="age">
-				<strong> Age: </strong>{{age}}
-			</p></li>
-		<li class="empl-row"><p class="length-of-service">
-				<strong> Length of service:</strong> {{lengthOfService}}
-			</p></li>
-		</template>
+
+		<div class="panel panel-default" id="employee-added">
+			<ul class="panel panel-default" id="employee-list">
+			</ul>
+			<template id='employee-template'>
+			<li class="edit">
+				<p data-id='{{id}}'>
+					<strong>ID:</strong> {{id}}
+				</p>
+			</li>
+			<li class="empl-row"><p class="first-name">
+					<strong> First name:</strong> {{firstName}}
+				</p></li>
+			<li class="empl-row"><p class="last-name">
+					<strong> Last name:</strong> {{lastName}}
+				</p></li>
+			<li class="empl-row"><p class="age">
+					<strong> Age: </strong>{{age}}
+				</p></li>
+			<li class="empl-row"><p class="length-of-service">
+					<strong> Length of service:</strong> {{lengthOfService}}
+				</p></li>
+			</template>
+		</div>
+
 	</div>
-	
-
 
 </body>
 </html>
