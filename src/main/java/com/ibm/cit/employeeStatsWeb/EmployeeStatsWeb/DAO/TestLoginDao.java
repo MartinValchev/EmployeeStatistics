@@ -15,8 +15,8 @@ public class TestLoginDao {
 		loginToken.setExpirationDate(date);
 		loginDao.addLoginToken(loginToken); */
 		LoginDao loginDao = new LoginDaoDBImpl();
-		LoginToken logintoken = loginDao.getLoginToken("d8611c34-3c55-40d8-89c4-6250be729980");
-		loginDao.deleteLoginToken(logintoken);
+		LoginToken loginToken = loginDao.getLoginToken("efa34bac-57c5-4414-99d1-f7509ac617a3");
+		loginDao.deleteLoginToken(loginToken);
 	}
 
 }

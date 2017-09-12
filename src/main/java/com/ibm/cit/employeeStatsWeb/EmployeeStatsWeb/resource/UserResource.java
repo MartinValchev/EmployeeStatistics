@@ -42,16 +42,19 @@ public class UserResource {
 			// set expiration time to 15 min
 			expirationDate = new Date(expirationDate.getTime() + 15 * 60 * 1000);
 			loginService.addLoginToken(token, expirationDate, user);
-			NewCookie newToken_cookie = new NewCookie("token_id",token,"/","localhost",1,"token id cookie",900,expirationDate,false,true);
-			NewCookie newUser_cookie = new NewCookie("logged_user",username,"/","localhost",1,"username cookie",900,expirationDate,false,false);
+			NewCookie newToken_cookie = new NewCookie("token_id", token, "/", "localhost", 1, "token id cookie", 900,
+					expirationDate, false, true);
+			NewCookie newUser_cookie = new NewCookie("logged_user", username, "/", "localhost", 1, "username cookie",
+					900, expirationDate, false, false);
 			GenericEntity<String> entity = new GenericEntity<String>(loginResponse) {
 			};
 			if (pageCookie != null) {
 				String pageUrl = pageCookie.getValue();
-				response = Response.seeOther(URI.create(pageUrl)).cookie(newToken_cookie).cookie(newUser_cookie).build();
+				response = Response.seeOther(URI.create(pageUrl)).cookie(newToken_cookie).cookie(newUser_cookie)
+						.build();
 			} else {
-				response = Response.seeOther(URI.create("http://localhost:8080/EmployeeStatsWeb/pages/home.html")).cookie(newUser_cookie)
-						.cookie(newToken_cookie).build();
+				response = Response.seeOther(URI.create("http://localhost:8080/EmployeeStatsWeb/pages/home.html"))
+						.cookie(newUser_cookie).cookie(newToken_cookie).build();
 			}
 			return response;
 		} else {
@@ -60,7 +63,7 @@ public class UserResource {
 		}
 	}
 
-	@Path("/secured/index")
+	@Path("/secured/home")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response getTokenResponse(@CookieParam("token_id") Cookie cookie) {
@@ -70,12 +73,34 @@ public class UserResource {
 		} else {
 			String tokenIdValue = cookie.getValue();
 			UserLoginService loginService = new UserLoginServiceImpl();
-			if (loginService.isLoginValid(tokenIdValue)) {
-				response = Response.status(200).build();
-			}
-
+			response = (loginService.isLoginValid(tokenIdValue)) ? response = Response.status(200).build()
+					: Response.status(401).build();
 		}
 		return response;
 	}
 
+	@Path("/exit")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public Response logout(@CookieParam("token_id") Cookie cookie) {
+		Response response = null;
+		if (cookie != null) {
+			String tokenValue = cookie.getValue();
+			Date expirationDate = new Date();
+			// set expiration time to 15 min
+			expirationDate = new Date(0);
+			NewCookie deletedTokencookie = new NewCookie("token_id", "deleted", "/", "localhost", 1, "token id cookie",
+					-50, expirationDate, false, true);
+			UserLoginService loginService = new UserLoginServiceImpl();
+			loginService.deleteLoginToken(tokenValue);
+			
+			expirationDate = new Date(expirationDate.getTime() - 15 * 60 * 1000);
+			response = Response.status(200).cookie(deletedTokencookie).build();
+
+		} else {
+			response = Response.status(200).build();
+		}
+
+		return response;
+	}
 }

@@ -103,5 +103,13 @@ public class UserLoginServiceImpl implements UserLoginService {
 		return loginToken;	
 	}
 
+	@Override
+	public void deleteLoginToken(String tokenValue) {
+		LoginDao loginDao =new LoginDaoDBImpl();
+		LoginToken loginToken = loginDao.getLoginToken(tokenValue);	
+		loginDao.deleteLoginToken(loginToken);
+		
+	}
+
 
 }

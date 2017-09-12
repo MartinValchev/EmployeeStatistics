@@ -4,9 +4,10 @@ var url ="http://localhost:8080/EmployeeStatsWeb/pages/AddEmployee.html";
 		    d.setTime(d.getTime() + (15*60*1000));
 		    var expires = "expires="+ d.toUTCString();
 		    document.cookie = "requested_page=" + url + ";" + expires + ";path=/";
-		    $('#add-Employee').on('click', function(){
-		    	console.log('clicked submit button');
-		    });  
+			var user_cookie = getCookie("logged_user");
+			var userElement = $("#logged_user");
+			$('#logged_user').text(user_cookie);
+		    
 		  function addEmployee (){
 		    	console.log('start');
 					var $outputContainer =$('#employee-list');
@@ -49,7 +50,7 @@ var url ="http://localhost:8080/EmployeeStatsWeb/pages/AddEmployee.html";
 										lengthOfService);		
 								
 								$outputContainer.append(Mustache.render(employeeTemplate, employee));
-							},
+							}
 							
 						},
 						error:function(jqXHR, textStatus, errorThrown){

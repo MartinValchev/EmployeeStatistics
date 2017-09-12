@@ -1,88 +1,57 @@
-body{
-	background-position:100px 200px;
-	width: 450px;
-	margin: 0px auto;
+h2.pageHeading{
 	text-align:center;
-	background-color: powderblue;
-	border: 10px solid #4CAF50;
-	border-radius:10px;
-	text-align:left;
-	padding:20px;
-	font-family:Arial;
-
-	
-}
-.pageHeading{
-	color:powderblue;
-	margin: 15px;
-	margin-left:0px;
-	text-align:left;
-	width: 960px;
-	text-align:left;
-	background-color:#4CAF50;
-	border-radius:5px;
 	letter-spacing:3px;
+	margin-top:-10px;
+	
 	
 }
-.input{
-	border:none;
-	border-radius:4px;
-	height: 30px;
+.jumbotron{
+	margin-top:-10px;
+	height:30px;
+	background-color:#7FE0FF;
 }
-ul{
-	background-color:#4CAF50;
-	color:powderblue;
-	list-style: none;
-	border-radius:10px;
-	paddinng-top:0px;
+#navigation_bar{
+	position: relative;
+	top: -30px;
+}
+#container_html{
 	border:none;
+}
+#login_Container{
+	position: relative;
+	left:-15px;
+	top: -50px;
+}
+#user_name,#pass_word{
+	position: relative;
+	left:-70px;
+}
+#employee-list{
+	border:none;
+}
+ul#employeesList,ul#statistics,ul#employee{
+	width:450px;
+}
+ul#employee{
+	position: relative;
+	top:30px;
+}
+ul#statistics{
+	position:relative;
+	left:50px;
+}
+#employeesList{
+	position:relative;
+	left:-50px;
+}
+#employee-added{
+	width:300px;
+	margin-top:10px;
+}
+.form-horizontal{
+	margin-left:30px;
+	width:400px;
 }
 
-#allEmployees ul li{
-	
-	width:400px;
-	background-color:#4CAF50;
-	list-style: none;
-	padding:15px;
-	text-align:left;
-	border: 5px solid white;
-	border-radius: 25px;
-}
-.btn{
-		background-color: #4CAF50;	
-	width: 80px;
-	height: 30px;
-	padding:5px;	
-	border:none;
-	border-radius:5px;
-	font-size:16px;
-	font-family:Arial;
-	font-weight:bold;
-	color: powderblue;
-	letter-spacing:2px;
-   
-}
-.emplContainer .btn{
-	margin:10px;
-	width: 200px;
-	height:50px;
-}
-.info{
-	background-color:#4CAF50;
-	border-radius:4px;
-	font-size:16px;
-	font-family:Arial;
-	font-weight:bold;
-	color:powderblue;
-	width: 180px;
-}
-#allEmployees ul{
-	background-color:powderblue;
-	
-}
-#allEmployees .empl-row{
-	border-color:powderblue;
-	margin-left: 60px auto;
-	position: relative;
-    left: -35px;
-}
+
+

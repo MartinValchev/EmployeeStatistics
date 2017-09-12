@@ -31,8 +31,8 @@ document.cookie = "requested_page=" + url + ";" + expires + ";path=/";
 				}
 
 			},
-			error : function(е) {
-				console.log('Error all employees request: ' + e)
+			error : function(error) {
+				console.log('Error all employees request: ' + error);
 			}
 
 		});

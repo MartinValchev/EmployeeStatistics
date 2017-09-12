@@ -146,6 +146,7 @@ public class LoginDaoDBImpl implements LoginDao {
 		Transaction tx = null;
 		Session session = null;
 		SessionFactory sf = null;
+		Login login = token.getLogin();
 
 		try {
 			sf = SessionFactoryGenerator.getSessionFactoryInstance();
@@ -153,7 +154,11 @@ public class LoginDaoDBImpl implements LoginDao {
 			session = sf.getCurrentSession();
 			tx = session.beginTransaction();
 			session.delete(token);
-			tx.commit();
+			session.delete(login);
+			
+			if (!tx.wasCommitted()) {
+			    tx.commit();
+			}
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();

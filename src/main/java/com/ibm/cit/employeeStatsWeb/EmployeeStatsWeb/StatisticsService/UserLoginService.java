@@ -12,12 +12,16 @@ public interface UserLoginService {
 
 	public boolean isLoginValid(String tokenValue);
 
-	public void addLoginToken(String token, Date expirationDate,Login login);
+	public void addLoginToken(String token, Date expirationDate, Login login);
+
 	public String generateTokenString();
-	
+
 	public int getUserId(String username);
-	public  String generateMD5Hash(String password);
+
+	public String generateMD5Hash(String password);
+
 	public LoginToken getLoginToken(String token);
+	
+	public void deleteLoginToken(String tokenString);
 
 }
-	
