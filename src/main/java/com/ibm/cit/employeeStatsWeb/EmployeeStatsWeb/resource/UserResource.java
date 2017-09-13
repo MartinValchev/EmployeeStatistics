@@ -46,6 +46,7 @@ public class UserResource {
 					expirationDate, false, true);
 			NewCookie newUser_cookie = new NewCookie("logged_user", username, "/", "localhost", 1, "username cookie",
 					900, expirationDate, false, false);
+			@SuppressWarnings("unused")
 			GenericEntity<String> entity = new GenericEntity<String>(loginResponse) {
 			};
 			if (pageCookie != null) {

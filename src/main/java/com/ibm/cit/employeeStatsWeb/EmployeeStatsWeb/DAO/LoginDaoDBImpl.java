@@ -1,5 +1,6 @@
 package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.HibernateException;

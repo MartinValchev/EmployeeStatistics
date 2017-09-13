@@ -29,15 +29,7 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 	@Override
 	public Employee getEmpoyee(int employeeID) {
 		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
-		List<Employee> employeeeList = employeeDao.getEmployeeList();
-		Employee employee = null;
-		for(Employee empl: employeeeList) {
-			if(empl.getId() ==employeeID) {
-				employee = empl;
-				break;
-			}
-			
-		}
+		Employee employee = employeeDao.getEmployee(employeeID);
 		return employee;
 	}
 	@Override
@@ -49,8 +41,8 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 
 	@Override
 	public int getEmployeeListSize() {
-		
-		return getEmployees().size();
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
+		return employeeDao.getAllEmployeesCount();
 	}
 
 	@Override
@@ -58,6 +50,27 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
 		Employee empl = employeeDao.addEmployee(employee);
 		return empl;
+	}
+
+	@Override
+	public List<Employee> getPortionEmployeeList(int offset, int limit) {
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
+		List<Employee> employees = employeeDao.getPortionEmployeeList(offset, limit);
+		return employees;
+	}
+
+	@Override
+	public int getEmployeePages(int pageLimit) {
+		int pagesCount = 0;
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
+		int employeeCount = employeeDao.getAllEmployeesCount();
+		if(employeeCount% pageLimit !=0) {
+			pagesCount = employeeCount/pageLimit +1;
+		}else {
+			pagesCount = employeeCount/pageLimit;
+		}
+		
+		return pagesCount;
 	}
 
 

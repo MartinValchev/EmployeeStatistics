@@ -3,12 +3,14 @@
 <head>
 <title>All Employees List</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+	rel="stylesheet">
 <link href="css/stylesheet-main.css" rel="stylesheet">
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/employeeTemplate.js"></script>
 <script src="js/mustache.js"></script>
-<script src="js/allEmployees.js"></script>
+
 <script src="js/cookieFunctions.js"></script>
 <script src="js/homePage.js"></script>
 <script src="js/logout.js"></script>
@@ -19,11 +21,9 @@
 	</div>
 	<nav id="navigation_bar" class="navbar navbar-inverse">
 		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">EmployeePage</a>
-			</div>
 			<ul class="nav navbar-nav" id="mainMenu">
-				<li  onclick="window.location.href ='home.html'" ><a data-toggle="tab" href="#">Home</a></li>
+				<li onclick="window.location.href ='home.html'"><a
+					data-toggle="tab" href="#">Home</a></li>
 				<li><a data-toggle="tab" href="#"
 					onclick="setRequestPageCookie('AddEmployee.html')" id="addEmployee">Add
 						Employee</a></li>
@@ -41,8 +41,8 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a id="logged_user" href="#"><span
 						class="glyphicon glyphicon-user"></span> User</a></li>
-				<li><a id ="logout" onclick="logout()" href="#"><span class="glyphicon glyphicon-log-out"></span>
-						Logout</a></li>
+				<li><a id="logout" onclick="logout()" href="#"><span
+						class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -71,6 +71,10 @@
 		</template>
 
 	</div>
-
+	<div id="empl_pages_div">
+		<ul id="empl_pages_list" class="pagination">
+		</ul>
+	</div>	
+<script src="js/allEmployees.js"></script>
 </body>
 </html>

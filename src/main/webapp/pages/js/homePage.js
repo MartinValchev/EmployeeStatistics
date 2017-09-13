@@ -10,7 +10,7 @@
 				var indexPageCookie = getCookie("homePage");
 				var user_cookie = getCookie("logged_user");
 				var userElement = $("#logged_user");
-				$('#logged_user').text(user_cookie);
+				$('#logged_user').text('welcome: '+ user_cookie);
 				
 			},
 			401 : function(response) {

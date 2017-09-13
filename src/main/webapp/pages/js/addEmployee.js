@@ -6,7 +6,8 @@ var url ="http://localhost:8080/EmployeeStatsWeb/pages/AddEmployee.html";
 		    document.cookie = "requested_page=" + url + ";" + expires + ";path=/";
 			var user_cookie = getCookie("logged_user");
 			var userElement = $("#logged_user");
-			$('#logged_user').text(user_cookie);
+			$('#logged_user').text('welcome: '+ user_cookie);
+			$('#employee-added').css('visibility','hidden');
 		    
 		  function addEmployee (){
 		    	console.log('start');
@@ -48,7 +49,7 @@ var url ="http://localhost:8080/EmployeeStatsWeb/pages/AddEmployee.html";
 								var employeeTemplate = $('#employee-template').html();
 								var employee = new Employee(id, firstName, lastName, age,
 										lengthOfService);		
-								
+								$('#employee-added').css('visibility','visible');
 								$outputContainer.append(Mustache.render(employeeTemplate, employee));
 							}
 							

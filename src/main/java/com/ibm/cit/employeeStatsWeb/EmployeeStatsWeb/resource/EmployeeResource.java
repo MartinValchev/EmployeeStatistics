@@ -1,6 +1,6 @@
 package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.resource;
 
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -12,6 +12,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
@@ -25,45 +26,21 @@ public class EmployeeResource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getEmployees(@QueryParam("markerId") int markerId, @QueryParam("start") int start,
-			@QueryParam("size") int size) {
+	public Response getEmployees(@QueryParam("start") int start, @QueryParam("size") int size) {
 		EmployeeStatisticsService statisticsService = new EmployeeStatisticsServiceImpl();
-		List<Employee> employees = statisticsService.getEmployees();
+
 		Response response = null;
 		ResponseBuilder rb = null;
-		// Cooking add
-		/*UserLoginService loginService = new UserLoginServiceImpl();
-		LoginToken lastLoginToken = loginService.getLoginToken("");
-		String tokenString = lastLoginToken.getHashToken();
-		Cookie cookieToken = new Cookie("token_id", tokenString);
-		NewCookie newCookieToken = new NewCookie(cookieToken); */
-		if (markerId > 0) {
-			List<Employee> shrinkedList = new ArrayList<>();
-			for (Employee empl : employees) {
-				if (empl.getId() >= markerId) {
-					shrinkedList.add(empl);
-				}
-			}
-			GenericEntity<List<Employee>> entity = new GenericEntity<List<Employee>>(shrinkedList) {
-			};
 
-			rb = Response.ok(entity, MediaType.APPLICATION_JSON);
-		} else if (start > 0 & size > 0) {
-			List<Employee> shrinkedList = new ArrayList<>();
-			for (Employee empl : employees) {
-				if (empl.getId() >= start) {
-					if (shrinkedList.size() == size) {
-						break;
-					}
-					shrinkedList.add(empl);
-				}
-			}
+		if (start >= 0 & size > 0) {
+			int employeeCount = statisticsService.getEmployeeListSize();
+			List<Employee> shrinkedList = statisticsService.getPortionEmployeeList(start, size);
 			GenericEntity<List<Employee>> shrinkEntity = new GenericEntity<List<Employee>>(shrinkedList) {
 			};
-			rb = Response.ok(shrinkEntity, MediaType.APPLICATION_JSON);
-
+			String employeeCountStr = "" + employeeCount;
+			rb = addCookiesResponse("employee_count", employeeCountStr, Response.status(200).entity(shrinkEntity));
 		} else {
-
+			List<Employee> employees = statisticsService.getEmployees();
 			GenericEntity<List<Employee>> entity = new GenericEntity<List<Employee>>(employees) {
 			};
 			rb = Response.ok(entity, MediaType.APPLICATION_JSON);
@@ -72,6 +49,14 @@ public class EmployeeResource {
 
 		response = rb.build();
 		return response;
+	}
+
+	private ResponseBuilder addCookiesResponse(String cookieName, String cookieValue, ResponseBuilder rb) {
+		Date expirationDate = new Date();
+		expirationDate = new Date(expirationDate.getTime() + 15 * 60 * 1000);
+		NewCookie cookie = new NewCookie(cookieName, cookieValue, "/", "localhost", 1, "", 900, expirationDate, false,
+				false);
+		return rb.cookie(cookie);
 	}
 
 	@GET
@@ -86,11 +71,12 @@ public class EmployeeResource {
 		} else {
 			GenericEntity<Employee> entity = new GenericEntity<Employee>(employee) {
 			};
-		/*	UserLoginService loginService = new UserLoginServiceImpl();
-			LoginToken lastLoginToken = loginService.getLoginToken("");
-			String tokenString = lastLoginToken.getHashToken();
-			Cookie cookieToken = new Cookie("token_id", tokenString);
-			NewCookie newCookieToken = new NewCookie(cookieToken); */
+			/*
+			 * UserLoginService loginService = new UserLoginServiceImpl(); LoginToken
+			 * lastLoginToken = loginService.getLoginToken(""); String tokenString =
+			 * lastLoginToken.getHashToken(); Cookie cookieToken = new Cookie("token_id",
+			 * tokenString); NewCookie newCookieToken = new NewCookie(cookieToken);
+			 */
 			response = Response.status(200).entity(entity).build();
 
 		}
@@ -112,11 +98,12 @@ public class EmployeeResource {
 		} else {
 			GenericEntity<Employee> entity = new GenericEntity<Employee>(resultEmpl) {
 			};
-		/*	UserLoginService loginService = new UserLoginServiceImpl();
-			LoginToken lastLoginToken = loginService.getLoginToken("");
-			String tokenString = lastLoginToken.getHashToken();
-			Cookie cookieToken = new Cookie("token_id", tokenString);
-			NewCookie newCookieToken = new NewCookie(cookieToken); */
+			/*
+			 * UserLoginService loginService = new UserLoginServiceImpl(); LoginToken
+			 * lastLoginToken = loginService.getLoginToken(""); String tokenString =
+			 * lastLoginToken.getHashToken(); Cookie cookieToken = new Cookie("token_id",
+			 * tokenString); NewCookie newCookieToken = new NewCookie(cookieToken);
+			 */
 			response = Response.status(200).entity(entity).build();
 		}
 

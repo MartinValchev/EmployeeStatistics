@@ -3,7 +3,9 @@ var url ="http://localhost:8080/EmployeeStatsWeb/pages/Statistics.html";
 		    d.setTime(d.getTime() + (15*60*1000));
 		    var expires = "expires="+ d.toUTCString();
 		    document.cookie = "requested_page=" + url + ";" + expires + ";path=/";
-  	
+		    var user_cookie = getCookie("logged_user");
+		    var userElement = $("#logged_user");
+		    $('#logged_user').text('welcome: '+ user_cookie);
 		    	    $.ajax({
 		    		type : 'GET',
 		    		url : 'http://localhost:8080/EmployeeStatsWeb/webapi/secured/statistics',

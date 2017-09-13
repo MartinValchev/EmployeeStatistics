@@ -48,4 +48,13 @@ public interface EmployeeStatisticsService {
 	 * @return Employee employee
 	 */
 	Employee addEmployee(Employee employee);
+	
+	/**
+	 * get portion of the employee list limited by employee id and limit countl
+	 * 
+	 * @param int lastId, int limit
+	 * @return List<Employee>
+	 */
+	List<Employee> getPortionEmployeeList(int offset, int limit);
+	int getEmployeePages(int pageLimit);
 }

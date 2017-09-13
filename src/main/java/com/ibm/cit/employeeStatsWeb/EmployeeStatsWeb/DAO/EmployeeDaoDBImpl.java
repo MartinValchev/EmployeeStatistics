@@ -22,12 +22,7 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 	@Override
 	public List<Employee> getEmployeeList() {
 		List<Employee> employeeList = null;
-		// EmployeeJDBC employeeJDBC = new EmployeeJDBC();
-		// Connection connection = employeeJDBC.startConnection();
-		// if (connection != null) {
-		// employeeList = employeeJDBC.generateEmployeeList(connection);
 		employeeList = getHibernateEmployeeList();
-		// }
 		return employeeList;
 	}
 
@@ -37,8 +32,8 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		List<Employee> results = null;
 		SessionFactory sf = null;
 		try {
-			sf =SessionFactoryGenerator.getSessionFactoryInstance();
-			//session = sf.openSession();
+			sf = SessionFactoryGenerator.getSessionFactoryInstance();
+			// session = sf.openSession();
 			session = sf.getCurrentSession();
 			tx = session.beginTransaction();
 			String allContactsQuery = "select * FROM Employee";
@@ -52,7 +47,7 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 				tx.rollback();
 			e.printStackTrace();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return results;
 	}
@@ -64,43 +59,99 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		Employee currentEmpl = null;
 		try {
 
-			sf =SessionFactoryGenerator.getSessionFactoryInstance();
-			//session = sf.openSession();
+			sf = SessionFactoryGenerator.getSessionFactoryInstance();
+			// session = sf.openSession();
 			session = sf.getCurrentSession();
 			tx = session.beginTransaction();
 			session.save(employee);
 			if (!tx.wasCommitted()) {
-			    tx.commit();
-			}		
+				tx.commit();
+			}
 			currentEmpl = getNewlyCreatedEmployee();
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
 			e.printStackTrace();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return currentEmpl;
 
 	}
+
 	private Employee getNewlyCreatedEmployee() {
 		Transaction tx = null;
 		Session session = null;
 		SessionFactory sf = null;
 		List<Employee> results = null;
-		sf =SessionFactoryGenerator.getSessionFactoryInstance();
+		sf = SessionFactoryGenerator.getSessionFactoryInstance();
+		session = sf.getCurrentSession();
+		tx = session.beginTransaction();
+		String allContactsQuery = "SELECT * FROM Employee ORDER BY ID DESC limit 1";
+		SQLQuery query = session.createSQLQuery(allContactsQuery);
+
+		query.addEntity(Employee.class);
+		results = query.list();
+		if (!tx.wasCommitted()) {
+			tx.commit();
+		}
+
+		return results.get(0);
+	}
+
+	@Override
+	public List<Employee> getPortionEmployeeList(int offset, int limit) {
+		Transaction tx = null;
+		Session session = null;
+		List<Employee> results = null;
+		SessionFactory sf = null;
+		try {
+			sf = SessionFactoryGenerator.getSessionFactoryInstance();
 			session = sf.getCurrentSession();
 			tx = session.beginTransaction();
-			String allContactsQuery = "SELECT * FROM Employee ORDER BY ID DESC limit 1";
-			SQLQuery query = session.createSQLQuery(allContactsQuery);
-				
+			String portionContactsQuery = "SELECT * FROM Employee ORDER BY id Asc OFFSET " + offset + " ROWS FETCH NEXT "
+					+ limit + " ROWS ONLY";
+			SQLQuery query = session.createSQLQuery(portionContactsQuery);
 			query.addEntity(Employee.class);
 			results = query.list();
-			if (!tx.wasCommitted()) {
-			    tx.commit();
-			}
-		
-		return results.get(0);
+			tx.commit();
+
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		} finally {
+			// session.close();
+		}
+		return results;
+	}
+
+	@Override
+	public int getAllEmployeesCount() {
+		Transaction tx = null;
+		Session session = null;
+		List<Object> results = null;
+		SessionFactory sf = null;
+		int employeeList = 0;
+		try {
+			sf = SessionFactoryGenerator.getSessionFactoryInstance();
+			session = sf.getCurrentSession();
+			tx = session.beginTransaction();
+			String portionContactsQuery = "SELECT COUNT(*) FROM employee";
+			SQLQuery query = session.createSQLQuery(portionContactsQuery);
+			results = query.list();
+			String countStr = results.get(0).toString();
+			employeeList = Integer.parseInt(countStr);
+			tx.commit();
+
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		} finally {
+			// session.close();
+		}
+		return employeeList;
 	}
 
 }

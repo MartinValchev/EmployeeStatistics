@@ -31,4 +31,16 @@ public class EmployeeDaoFileImpl implements EmployeeDao {
 		
 	}
 
+	@Override
+	public List<Employee> getPortionEmployeeList(int lastId, int limit) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getAllEmployeesCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

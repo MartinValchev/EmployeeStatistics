@@ -5,6 +5,9 @@
 		    document.cookie = "requested_page=" + url + ";" + expires + ";path=/";
 		    
 		    var testUrl = 'http://localhost:8080/EmployeeStatsWeb/webapi/login/tokenCheck';
+		    var user_cookie = getCookie("logged_user");
+		    var userElement = $("#logged_user");
+		    $('#logged_user').text('welcome: '+ user_cookie);
 		    
 		    function getEmployee(){
 							var $idField = document.getElementById("employeeId").value;

@@ -31,4 +31,8 @@ public interface EmployeeDao {
 	 *             
 	 */
 	public Employee addEmployee(Employee employee );
+	
+	public List<Employee> getPortionEmployeeList(int lastId, int limit);
+	
+	public int getAllEmployeesCount();
 }
