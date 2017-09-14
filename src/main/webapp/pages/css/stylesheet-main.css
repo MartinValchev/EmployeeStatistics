@@ -57,7 +57,7 @@ ul#statistics{
 	width:400px;
 }
 .btn.btn-default:focus {
-    background-color: green;
+    background-color: #7FE0FF;
 }
 #empl_pages_div{
 	position: absolute;

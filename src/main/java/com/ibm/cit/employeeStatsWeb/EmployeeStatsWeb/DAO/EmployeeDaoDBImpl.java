@@ -14,9 +14,28 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 
 	@Override
 	public Employee getEmployee(int id) {
-		List<Employee> employeeList = getEmployeeList();
-		Employee employee = employeeList.get(id);
-		return employee;
+		Transaction tx = null;
+		Session session = null;
+		List<Employee> results = null;
+		SessionFactory sf = null;
+		try {
+			sf = SessionFactoryGenerator.getSessionFactoryInstance();
+			session = sf.getCurrentSession();
+			tx = session.beginTransaction();
+			String employeeQuerry = "SELECT * FROM Employee where id= " +id;
+			SQLQuery query = session.createSQLQuery(employeeQuerry);
+			query.addEntity(Employee.class);
+			results = query.list();
+			tx.commit();
+
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		} finally {
+			// session.close();
+		}
+		return results.get(0);
 	}
 
 	@Override

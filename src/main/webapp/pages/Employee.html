@@ -9,10 +9,10 @@
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/cookieFunctions.js"></script>
 <script src="js/getEmployee.js"></script>
 <script src="js/employeeTemplate.js"></script>
 <script src="js/mustache.js"></script>
-<script src="js/cookieFunctions.js"></script>
 <script src="js/homePage.js"></script>
 <script src="js/logout.js"></script>
 
@@ -54,13 +54,11 @@
 	<div class="col-sm-10">
 		<p class="info"><strong>Type Employee ID</strong></p>
 		<input class="input" type="text" id="employeeId" />
-		<div class="btn-group">
 			<button id="get-Employee" class="btn btn-success"
 				onclick="getEmployee()">Submit</button>
 			<button class="btn btn-info" type="reset" id="resetField"
 				onclick="getElementById('employeeId').value=null">Reset</button>
 
-		</div>
 	</div>
 	<div class="col-sm-10">
 

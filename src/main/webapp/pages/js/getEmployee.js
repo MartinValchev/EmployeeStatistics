@@ -18,6 +18,7 @@
 								url : resultURL,
 						  statusCode :{
 							   200: function(result) {
+								   $('#employee').empty();
 									var imported = document.createElement('script');
 									imported.src = 'js/employeeTemplate.js';
 									document.head.appendChild(imported);
