@@ -32,7 +32,21 @@ public interface EmployeeDao {
 	 */
 	public Employee addEmployee(Employee employee );
 	
-	public List<Employee> getPortionEmployeeList(int lastId, int limit);
+	/**
+	 * gets portion of all employee records table using provided offset and limit values
+	 * 
+	 * @param int offset, int limit
+	 * @throws @return List<Employee>
+	 *             
+	 */
+	public List<Employee> getPortionEmployeeList(int offset, int limit);
 	
+	/**
+	 * provided all employees count stored in Employee table
+	 * 
+	 * @param 
+	 * @throws @return int
+	 *             
+	 */
 	public int getAllEmployeesCount();
 }

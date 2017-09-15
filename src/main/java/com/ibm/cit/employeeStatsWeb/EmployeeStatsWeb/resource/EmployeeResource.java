@@ -16,6 +16,8 @@ import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
+import org.apache.log4j.Logger;
+
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.StatisticsService.EmployeeStatisticsService;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.StatisticsService.EmployeeStatisticsServiceImpl;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee;
@@ -67,16 +69,12 @@ public class EmployeeResource {
 		Employee employee = statisticsService.getEmpoyee(employeeId);
 		Response response = null;
 		if (employee == null) {
+			Logger log = Logger.getLogger(EmployeeResource.class);
+			log.error("Ivalid employee id number provided");
 			response = Response.status(500).entity("Ivalid id number...").build();
 		} else {
 			GenericEntity<Employee> entity = new GenericEntity<Employee>(employee) {
 			};
-			/*
-			 * UserLoginService loginService = new UserLoginServiceImpl(); LoginToken
-			 * lastLoginToken = loginService.getLoginToken(""); String tokenString =
-			 * lastLoginToken.getHashToken(); Cookie cookieToken = new Cookie("token_id",
-			 * tokenString); NewCookie newCookieToken = new NewCookie(cookieToken);
-			 */
 			response = Response.status(200).entity(entity).build();
 
 		}
@@ -94,6 +92,8 @@ public class EmployeeResource {
 		Employee resultEmpl = statisticsService.addEmployee(employee);
 
 		if (employee == null) {
+			Logger log = Logger.getLogger(EmployeeResource.class);
+			log.error("Server error - Employee record not retrieved correctly");
 			response = Response.status(500).entity("Employee record not retrieved correctly").build();
 		} else {
 			GenericEntity<Employee> entity = new GenericEntity<Employee>(resultEmpl) {

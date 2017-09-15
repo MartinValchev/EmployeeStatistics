@@ -1,0 +1,10 @@
+2017-09-15 09:37:58 FATAL Log4JExample:10 - Fatal Error occured
+2017-09-15 09:37:58 ERROR Log4JExample:11 - Error occured
+2017-09-15 09:37:58 WARN  Log4JExample:12 - test Warning
+2017-09-15 09:37:58 INFO  Log4JExample:13 - Test Message
+2017-09-15 09:37:58 DEBUG Log4JExample:14 - Hello debug message
+2017-09-15 09:38:12 FATAL Log4JExample:10 - Fatal Error occured
+2017-09-15 09:38:12 ERROR Log4JExample:11 - Error occured
+2017-09-15 09:38:12 WARN  Log4JExample:12 - test Warning
+2017-09-15 09:38:12 INFO  Log4JExample:13 - Test Message
+2017-09-15 09:38:12 DEBUG Log4JExample:14 - Hello debug message

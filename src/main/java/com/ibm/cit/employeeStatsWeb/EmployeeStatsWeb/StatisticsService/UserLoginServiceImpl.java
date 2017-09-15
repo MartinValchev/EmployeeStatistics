@@ -3,13 +3,15 @@ package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.StatisticsService;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO.LoginDao;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO.LoginDaoDBImpl;
-import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken;
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login;
+import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken;
 
 public class UserLoginServiceImpl implements UserLoginService {
 
@@ -87,7 +89,9 @@ public class UserLoginServiceImpl implements UserLoginService {
 			if(tokenExpireDate.after(currentDate)) {
 				isTokenValid =true;
 			}else {
-				loginDao.deleteLoginToken(loginToken);
+				List<LoginToken> loginTokens = new ArrayList<LoginToken>();
+				loginTokens.add(loginToken);
+				loginDao.deleteLoginToken(loginTokens);
 			} 
 			
 		}
@@ -107,7 +111,9 @@ public class UserLoginServiceImpl implements UserLoginService {
 	public void deleteLoginToken(String tokenValue) {
 		LoginDao loginDao =new LoginDaoDBImpl();
 		LoginToken loginToken = loginDao.getLoginToken(tokenValue);	
-		loginDao.deleteLoginToken(loginToken);
+		List<LoginToken> loginTokens = new ArrayList<LoginToken>();
+		loginTokens.add(loginToken);
+		loginDao.deleteLoginToken(loginTokens);
 		
 	}
 

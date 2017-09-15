@@ -72,7 +72,23 @@
         <artifactId>hibernate-core</artifactId>
         <version>4.3.11.Final</version>
     </dependency>
-
+	  <dependency>
+    <groupId>org.quartz-scheduler</groupId>
+    <artifactId>quartz</artifactId>
+    <version>2.2.1</version>
+  </dependency>
+  <dependency>
+    <groupId>org.quartz-scheduler</groupId>
+    <artifactId>quartz-jobs</artifactId>
+    <version>2.2.1</version>
+  </dependency> 
+  <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+  
 	</dependencies>
 	<properties>
 		<jersey.version>2.16</jersey.version>

@@ -3,6 +3,7 @@ package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
@@ -76,13 +77,16 @@ public class LoginDaoDBImpl implements LoginDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
+			addLogging(e.toString());
 		} finally {
 			//session.close();
 		}
 		return loginToken;
 	}
-
+	private void addLogging(String message) {
+		Logger log = Logger.getLogger(EmployeeDaoDBImpl.class);
+		log.error(message);
+	}
 	@Override
 	public int getUserId(String username) {
 		Transaction tx = null;
@@ -106,7 +110,7 @@ public class LoginDaoDBImpl implements LoginDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
+			addLogging(e.toString());
 		} finally {
 			//session.close();
 		}
@@ -135,7 +139,7 @@ public class LoginDaoDBImpl implements LoginDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
+			addLogging(e.toString());
 		} finally {
 			//session.close();
 		}
@@ -143,19 +147,22 @@ public class LoginDaoDBImpl implements LoginDao {
 	}
 
 	@Override
-	public void deleteLoginToken(LoginToken token) {
+	public void deleteLoginToken(List<LoginToken> tokens) {
 		Transaction tx = null;
 		Session session = null;
 		SessionFactory sf = null;
-		Login login = token.getLogin();
+		
 
 		try {
 			sf = SessionFactoryGenerator.getSessionFactoryInstance();
 			//session = sf.openSession();
 			session = sf.getCurrentSession();
 			tx = session.beginTransaction();
-			session.delete(token);
-			session.delete(login);
+			for(LoginToken token: tokens) {
+				Login login = token.getLogin();
+				session.delete(token);
+				session.delete(login);	
+			}
 			
 			if (!tx.wasCommitted()) {
 			    tx.commit();
@@ -163,13 +170,41 @@ public class LoginDaoDBImpl implements LoginDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
+			addLogging(e.toString());
 		} finally {
 			//session.close();
 			//sf.close();
 		}
 
 		
+	}
+
+	@Override
+	public List<LoginToken> getAllLoginTokens() {
+		Transaction tx = null;
+		Session session = null;
+		List<LoginToken> results = null;
+		String tokenQuery = null;
+		tokenQuery = "SELECT * from logintoken";
+			
+		try {
+			SessionFactory sf = SessionFactoryGenerator.getSessionFactoryInstance();
+			//session = sf.openSession();
+			session= sf.getCurrentSession();
+			tx = session.beginTransaction();
+			SQLQuery query = session.createSQLQuery(tokenQuery);
+			query.addEntity(LoginToken.class);
+			results = query.list();
+			tx.commit();
+
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			addLogging(e.toString());
+		} finally {
+			//session.close();
+		}
+		return results;
 	}
 
 }

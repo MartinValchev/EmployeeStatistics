@@ -2,6 +2,7 @@ package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
@@ -31,11 +32,13 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
+			String errorMessage =e.toString();
+			addLogging(errorMessage);
 		} finally {
 			// session.close();
 		}
-		return results.get(0);
+		Employee employee =(results==null)?null:results.get(0);
+		return employee;
 	}
 
 	@Override
@@ -64,7 +67,8 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
+			String errorMessage =e.toString();
+			addLogging(errorMessage);
 		} finally {
 			// session.close();
 		}
@@ -90,7 +94,8 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
+			String errorMessage =e.toString();
+			addLogging(errorMessage);
 		} finally {
 			// session.close();
 		}
@@ -117,7 +122,10 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 
 		return results.get(0);
 	}
-
+	private void addLogging(String message) {
+		Logger log = Logger.getLogger(EmployeeDaoDBImpl.class);
+		log.error(message);
+	}
 	@Override
 	public List<Employee> getPortionEmployeeList(int offset, int limit) {
 		Transaction tx = null;
@@ -138,7 +146,8 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
+			String errorMessage =e.toString();
+			addLogging(errorMessage);
 		} finally {
 			// session.close();
 		}
@@ -166,7 +175,8 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
+			String errorMessage =e.toString();
+			addLogging(errorMessage);
 		} finally {
 			// session.close();
 		}
