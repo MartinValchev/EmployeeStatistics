@@ -64,5 +64,11 @@ ul#statistics{
     left: 50px;
     top: 880px;
 }
-
+#login-btn{
+	position:relative;
+	left:190px;
+}
+#container_html{
+	border:0px;
+}
 

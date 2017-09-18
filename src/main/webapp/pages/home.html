@@ -4,7 +4,9 @@
 <meta charset="ISO-8859-1">
 <title>Employee Index Page</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+	rel="stylesheet">
 <link href="css/stylesheet-main.css" rel="stylesheet">
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/popper.min.js"></script>
@@ -15,17 +17,17 @@
 <script src="js/logout.js"></script>
 <body>
 	<header> </header>
-		
-		<div class="jumbotron">
+
+	<div class="jumbotron">
 		<h2 class="pageHeading">Employee Home Page</h2>
 	</div>
 
 	<nav id="navigation_bar" class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav" id="mainMenu">
-				<li class="active"  onclick="window.location.href ='home.html'"><a
+				<li class="active" onclick="window.location.href ='home.html'"><a
 					data-toggle="tab" href="#">Home</a></li>
-				<li ><a data-toggle="tab" href="#"
+				<li><a data-toggle="tab" href="#"
 					onclick="setRequestPageCookie('AddEmployee.html')" id="addEmployee">Add
 						Employee</a></li>
 				<li><a data-toggle="tab" href="#"
@@ -47,10 +49,14 @@
 			</ul>
 		</div>
 	</nav>
-	<div id="container_html" class="panel panel-default">
-		<p id="welcome">Welcome to Employees Statistics web application. </p>
-					<p> Use navigation menu in order to add Employee, get all Employees list,</p>
-					<p> have information about specific employee or all employees statistics.</p>
+	<div id="container_html">
+		<p id="welcome">Welcome to Employees Statistics web application.</p>
+		<p>Use navigation menu in order to:</p>
+		<p>Add new Employee record</p>
+		<p>Get All Employee records</p>
+		<p>Get specific Employee record</p>
+		<p>Get all Employees statistics</p>
 	</div>
+
 </body>
 </html>

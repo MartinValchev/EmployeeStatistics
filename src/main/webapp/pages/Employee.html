@@ -52,7 +52,14 @@
 	</nav>
 	</div>
 	<div class="col-sm-10">
-		<p class="info"><strong>Type Employee ID</strong></p>
+		<p class="info"><strong>Criteria: </strong>
+		<select id="criteria">
+		  <option  value="first_name">First Name</option>
+		  <option  value="last_name">Last Name</option>
+		  <option  value="age">Age</option>
+		  <option  value="length_of_service">Length of Service</option>
+		</select>
+</p>
 		<input class="input" type="text" id="employeeId" />
 			<button id="get-Employee" class="btn btn-success"
 				onclick="getEmployee()">Submit</button>

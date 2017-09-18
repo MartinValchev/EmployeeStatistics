@@ -15,6 +15,17 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+      <servlet>
+    <servlet-name>log4j-init</servlet-name>
+    <servlet-class>com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.logging.Log4jInit</servlet-class>
+
+    <init-param>
+      <param-name>log4j-init-file</param-name>
+      <param-value>WEB-INF/classes/log4j.properties</param-value>
+    </init-param>
+
+    <load-on-startup>1</load-on-startup>
+  </servlet>
     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
         <url-pattern>/webapi/*</url-pattern>
@@ -34,7 +45,7 @@
         </context-param>
         <context-param>
             <param-name>quartz:config-file</param-name>
-            <param-value>quartz-config.xml</param-value>
+            <param-value>quartz.properties</param-value>
         </context-param>
     <listener>
     <listener-class>

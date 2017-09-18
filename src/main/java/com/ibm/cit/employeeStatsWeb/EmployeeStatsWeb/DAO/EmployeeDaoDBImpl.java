@@ -183,4 +183,49 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		return employeeList;
 	}
 
+	@Override
+	public List<Employee> getEmployeeListLength(int lengthOfService) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> getEmployeeListAge(int age) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> getEmployeeListFirstName(String firstName) {
+		Transaction tx = null;
+		Session session = null;
+		List<Employee> results = null;
+		SessionFactory sf = null;
+		try {
+			sf = SessionFactoryGenerator.getSessionFactoryInstance();
+			session = sf.getCurrentSession();
+			tx = session.beginTransaction();
+			String employeeQuerry = "SELECT * FROM Employee where id= \'" +firstName + '\'';
+			SQLQuery query = session.createSQLQuery(employeeQuerry);
+			query.addEntity(Employee.class);
+			results = query.list();
+			tx.commit();
+
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			String errorMessage =e.toString();
+			addLogging(errorMessage);
+		} finally {
+			// session.close();
+		}
+		return results;
+	}
+
+	@Override
+	public List<Employee> getEmployeeListLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

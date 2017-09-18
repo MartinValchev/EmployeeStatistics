@@ -1,10 +1,1430 @@
-2017-09-15 09:37:58 FATAL Log4JExample:10 - Fatal Error occured
-2017-09-15 09:37:58 ERROR Log4JExample:11 - Error occured
-2017-09-15 09:37:58 WARN  Log4JExample:12 - test Warning
-2017-09-15 09:37:58 INFO  Log4JExample:13 - Test Message
-2017-09-15 09:37:58 DEBUG Log4JExample:14 - Hello debug message
-2017-09-15 09:38:12 FATAL Log4JExample:10 - Fatal Error occured
-2017-09-15 09:38:12 ERROR Log4JExample:11 - Error occured
-2017-09-15 09:38:12 WARN  Log4JExample:12 - test Warning
-2017-09-15 09:38:12 INFO  Log4JExample:13 - Test Message
-2017-09-15 09:38:12 DEBUG Log4JExample:14 - Hello debug message
+2017-09-15 16:42:06 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2017-09-15 16:42:06 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@3beb20de
+2017-09-15 16:42:06 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@3beb20de
+2017-09-15 16:42:06 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@3beb20de
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@151467cf
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@389f4eb2
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration yes_no -> org.hibernate.type.YesNoType@5ed78462
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@44abe6af
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@44abe6af
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@44abe6af
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration character -> org.hibernate.type.CharacterType@25dd9185
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration char -> org.hibernate.type.CharacterType@25dd9185
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@25dd9185
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@3cb727f3
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@3cb727f3
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@3cb727f3
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration integer -> org.hibernate.type.IntegerType@26566d0e
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration int -> org.hibernate.type.IntegerType@26566d0e
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@26566d0e
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@69601c55
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@69601c55
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@69601c55
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@3ffbdf63
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@3ffbdf63
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@3ffbdf63
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@3509be93
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@3509be93
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@3509be93
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1872328a
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1872328a
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@43b9b415
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@43b9b415
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration string -> org.hibernate.type.StringType@55a14adf
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.String -> org.hibernate.type.StringType@55a14adf
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@72442ae4
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@78d09db5
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration url -> org.hibernate.type.UrlType@11cdacf6
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@11cdacf6
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration date -> org.hibernate.type.DateType@5e2ff96d
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5e2ff96d
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration time -> org.hibernate.type.TimeType@4a892283
+2017-09-15 16:42:07 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@4a892283
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration timestamp -> org.hibernate.type.TimestampType@5a418295
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@5a418295
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@5a418295
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@3b1735d3
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration calendar -> org.hibernate.type.CalendarType@7d49b31d
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7d49b31d
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7d49b31d
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@7dfea4a7
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration locale -> org.hibernate.type.LocaleType@65f5818d
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@65f5818d
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration currency -> org.hibernate.type.CurrencyType@6d4ada2b
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@6d4ada2b
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@4dbcf39c
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4dbcf39c
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration class -> org.hibernate.type.ClassType@4f9145ba
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@4f9145ba
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@1a9f9f5b
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@1a9f9f5b
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@1d31e172
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@1953cd5d
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration binary -> org.hibernate.type.BinaryType@56cc3224
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration byte[] -> org.hibernate.type.BinaryType@56cc3224
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration [B -> org.hibernate.type.BinaryType@56cc3224
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@604e105e
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@604e105e
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@604e105e
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration image -> org.hibernate.type.ImageType@7cf421cf
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration characters -> org.hibernate.type.CharArrayType@2bb8027e
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration char[] -> org.hibernate.type.CharArrayType@2bb8027e
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration [C -> org.hibernate.type.CharArrayType@2bb8027e
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@3be24656
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@3be24656
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@3be24656
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration text -> org.hibernate.type.TextType@41ea2c68
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration ntext -> org.hibernate.type.NTextType@657298b8
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration blob -> org.hibernate.type.BlobType@4f8421d3
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@4f8421d3
+2017-09-15 16:42:08 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2b5cbccd
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration clob -> org.hibernate.type.ClobType@3bdc4749
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3bdc4749
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration nclob -> org.hibernate.type.NClobType@2d1fcac0
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@2d1fcac0
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@206ad5f6
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@41105b6
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration serializable -> org.hibernate.type.SerializableType@16b4e08
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration object -> org.hibernate.type.ObjectType@4f9226a9
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@4f9226a9
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6f078ed9
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@62702065
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@14bd017b
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@5789ad84
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4ab90ea
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@673beb12
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1bf19857
+2017-09-15 16:42:09 DEBUG BasicTypeRegistry:146 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@10ee320
+2017-09-15 16:42:10 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-09-15 16:42:10 INFO  Version:54 - HHH000412: Hibernate Core {4.3.11.Final}
+2017-09-15 16:42:10 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-09-15 16:42:10 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-09-15 16:42:10 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2017-09-15 16:42:10 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2017-09-15 16:42:10 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2017-09-15 16:42:10 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2017-09-15 16:42:10 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [hilo] -> [org.hibernate.id.TableHiLoGenerator]
+2017-09-15 16:42:10 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2017-09-15 16:42:10 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2017-09-15 16:42:11 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2017-09-15 16:42:11 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.SequenceGenerator]
+2017-09-15 16:42:11 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2017-09-15 16:42:11 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2017-09-15 16:42:11 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2017-09-15 16:42:11 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2017-09-15 16:42:11 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2017-09-15 16:42:11 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2017-09-15 16:42:11 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-09-15 16:42:11 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-09-15 16:42:12 DEBUG DTDEntityResolver:69 - Trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd]
+2017-09-15 16:42:12 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-09-15 16:42:12 DEBUG DTDEntityResolver:76 - Attempting to resolve on classpath under org/hibernate/
+2017-09-15 16:42:12 DEBUG DTDEntityResolver:108 - Located [http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd] in classpath
+2017-09-15 16:42:12 DEBUG Configuration:2037 - hibernate.connection.driver_class=org.postgresql.Driver
+2017-09-15 16:42:12 DEBUG Configuration:2037 - hibernate.connection.url=jdbc:postgresql://127.0.0.1:5432/EmployeeDatabase
+2017-09-15 16:42:12 DEBUG Configuration:2037 - hibernate.connection.username=postgres
+2017-09-15 16:42:12 DEBUG Configuration:2037 - hibernate.connection.password=Postgre12@
+2017-09-15 16:42:12 DEBUG Configuration:2037 - hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+2017-09-15 16:42:12 DEBUG Configuration:2037 - hibernate.current_session_context_class=thread
+2017-09-15 16:42:12 DEBUG Configuration:2037 - hibernate.jdbc.use_get_generated_keys=true
+2017-09-15 16:42:12 DEBUG Configuration:2037 - hibernate.temp.use_jdbc_metadata_defaults=false
+2017-09-15 16:42:12 DEBUG Configuration:2037 - show_sql=true
+2017-09-15 16:42:12 DEBUG Configuration:2256 - Session-factory config [null] named resource [com/cit/employee/Employee.hbm.xml] for mapping
+2017-09-15 16:42:12 INFO  Configuration:759 - HHH000221: Reading mappings from resource: com/cit/employee/Employee.hbm.xml
+2017-09-15 16:42:12 DEBUG DTDEntityResolver:69 - Trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2017-09-15 16:42:12 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-09-15 16:42:12 DEBUG DTDEntityResolver:76 - Attempting to resolve on classpath under org/hibernate/
+2017-09-15 16:42:12 DEBUG DTDEntityResolver:108 - Located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2017-09-15 16:42:14 DEBUG Configuration:2276 - Session-factory config [null] named class [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee] for mapping
+2017-09-15 16:42:14 DEBUG Configuration:2256 - Session-factory config [null] named resource [com/cit/employee/Login.hbm.xml] for mapping
+2017-09-15 16:42:14 INFO  Configuration:759 - HHH000221: Reading mappings from resource: com/cit/employee/Login.hbm.xml
+2017-09-15 16:42:14 DEBUG DTDEntityResolver:69 - Trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2017-09-15 16:42:14 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-09-15 16:42:14 DEBUG DTDEntityResolver:76 - Attempting to resolve on classpath under org/hibernate/
+2017-09-15 16:42:14 DEBUG DTDEntityResolver:108 - Located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2017-09-15 16:42:16 DEBUG Configuration:2256 - Session-factory config [null] named resource [com/cit/employee/LoginToken.hbm.xml] for mapping
+2017-09-15 16:42:16 INFO  Configuration:759 - HHH000221: Reading mappings from resource: com/cit/employee/LoginToken.hbm.xml
+2017-09-15 16:42:16 DEBUG DTDEntityResolver:69 - Trying to resolve system-id [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd]
+2017-09-15 16:42:16 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-09-15 16:42:16 DEBUG DTDEntityResolver:76 - Attempting to resolve on classpath under org/hibernate/
+2017-09-15 16:42:16 DEBUG DTDEntityResolver:108 - Located [http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd] in classpath
+2017-09-15 16:42:18 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+2017-09-15 16:42:18 DEBUG Configuration:2217 - Properties: {hibernate.connection.password=Postgre12@, java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Program Files\Java\jre1.8.0_131\bin, java.vm.version=25.131-b11, hibernate.connection.username=postgres, user.country.format=BG, hibernate.temp.use_jdbc_metadata_defaults=false, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.script=, user.country=US, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\Users\martin.valchev\projects\EmployeeStats\EmployeeStatistics, java.runtime.version=1.8.0_131-b11, hibernate.jdbc.use_get_generated_keys=true, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, hibernate.current_session_context_class=thread, java.endorsed.dirs=C:\Program Files\Java\jre1.8.0_131\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\MARTIN~1.VAL\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 10, sun.jnu.encoding=Cp1252, java.library.path=C:\Program Files\Java\jre1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files (x86)\Skype\Phone\;C:\Users\martin.valchev\AppData\Local\Microsoft\WindowsApps;;C:\Users\martin.valchev\Desktop;;., java.specification.name=Java Platform API Specification, java.class.version=52.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.0, user.home=C:\Users\martin.valchev, user.timezone=Europe/Helsinki, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=UTF-8, java.specification.version=1.8, hibernate.connection.driver_class=org.postgresql.Driver, show_sql=true, java.class.path=C:\Users\martin.valchev\projects\EmployeeStats\EmployeeStatistics\target\classes;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\annotations-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina-ant.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina-ha.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina-storeconfig.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina-tribes.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\ecj-4.6.3.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\el-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\jasper-el.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\jasper.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\jaspic-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\jsp-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\servlet-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-coyote.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-dbcp.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-i18n-es.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-i18n-fr.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-i18n-ja.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-jdbc.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-jni.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-util-scan.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-util.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-websocket.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\websocket-api.jar;C:\Users\martin.valchev\projects\EmployeeStats\EmployeeStatistics\properties;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet-core\2.16\jersey-container-servlet-core-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\external\javax.inject\2.4.0-b09\javax.inject-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\core\jersey-common\2.16\jersey-common-2.16.jar;C:\Users\martin.valchev\.m2\repository\javax\annotation\javax.annotation-api\1.2\javax.annotation-api-1.2.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\bundles\repackaged\jersey-guava\2.16\jersey-guava-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\hk2-api\2.4.0-b09\hk2-api-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\hk2-utils\2.4.0-b09\hk2-utils-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\2.4.0-b09\aopalliance-repackaged-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\hk2-locator\2.4.0-b09\hk2-locator-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.1\osgi-resource-locator-1.0.1.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\core\jersey-server\2.16\jersey-server-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\core\jersey-client\2.16\jersey-client-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\media\jersey-media-jaxb\2.16\jersey-media-jaxb-2.16.jar;C:\Users\martin.valchev\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\martin.valchev\.m2\repository\javax\ws\rs\javax.ws.rs-api\2.0.1\javax.ws.rs-api-2.0.1.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\media\jersey-media-moxy\2.16\jersey-media-moxy-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\ext\jersey-entity-filtering\2.16\jersey-entity-filtering-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.moxy\2.5.0\org.eclipse.persistence.moxy-2.5.0.jar;C:\Users\martin.valchev\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.core\2.5.0\org.eclipse.persistence.core-2.5.0.jar;C:\Users\martin.valchev\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.asm\2.5.0\org.eclipse.persistence.asm-2.5.0.jar;C:\Users\martin.valchev\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.antlr\2.5.0\org.eclipse.persistence.antlr-2.5.0.jar;C:\Users\martin.valchev\.m2\repository\com\owlike\genson\0.99\genson-0.99.jar;C:\Users\martin.valchev\.m2\repository\org\apache\httpcomponents\httpclient\4.5\httpclient-4.5.jar;C:\Users\martin.valchev\.m2\repository\org\apache\httpcomponents\httpcore\4.4.1\httpcore-4.4.1.jar;C:\Users\martin.valchev\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\martin.valchev\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\Users\martin.valchev\.m2\repository\postgresql\postgresql\9.1-901-1.jdbc4\postgresql-9.1-901-1.jdbc4.jar;C:\Users\martin.valchev\.m2\repository\org\hibernate\hibernate-core\4.3.11.Final\hibernate-core-4.3.11.Final.jar;C:\Users\martin.valchev\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\martin.valchev\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\martin.valchev\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\martin.valchev\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\martin.valchev\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\martin.valchev\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.5.Final\hibernate-commons-annotations-4.0.5.Final.jar;C:\Users\martin.valchev\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\martin.valchev\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;C:\Users\martin.valchev\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\martin.valchev\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar;C:\Users\martin.valchev\.m2\repository\org\quartz-scheduler\quartz\2.2.1\quartz-2.2.1.jar;C:\Users\martin.valchev\.m2\repository\c3p0\c3p0\0.9.1.1\c3p0-0.9.1.1.jar;C:\Users\martin.valchev\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar;C:\Users\martin.valchev\.m2\repository\org\quartz-scheduler\quartz-jobs\2.2.1\quartz-jobs-2.2.1.jar;C:\Users\martin.valchev\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar, user.name=martin.valchev, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true, java.vm.specification.version=1.8, sun.java.command=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.schedule.JobTrigger, java.home=C:\Program Files\Java\jre1.8.0_131, sun.arch.data.model=64, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.connection.url=jdbc:postgresql://127.0.0.1:5432/EmployeeDatabase, user.language=en, java.specification.vendor=Oracle Corporation, user.language.format=bg, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_131, java.ext.dirs=C:\Program Files\Java\jre1.8.0_131\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.boot.class.path=C:\Program Files\Java\jre1.8.0_131\lib\resources.jar;C:\Program Files\Java\jre1.8.0_131\lib\rt.jar;C:\Program Files\Java\jre1.8.0_131\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_131\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_131\lib\jce.jar;C:\Program Files\Java\jre1.8.0_131\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_131\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_131\classes, java.vendor=Oracle Corporation, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}
+2017-09-15 16:42:18 DEBUG IntegratorServiceImpl:63 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2017-09-15 16:42:18 DEBUG IntegratorServiceImpl:63 - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2017-09-15 16:42:18 DEBUG IntegratorServiceImpl:63 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2017-09-15 16:42:19 DEBUG StrategySelectorImpl:79 - Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5] -> [org.hibernate.dialect.MySQL5Dialect] (replacing [org.hibernate.dialect.MySQL5Dialect])
+2017-09-15 16:42:19 DEBUG StrategySelectorImpl:79 - Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5InnoDB] -> [org.hibernate.dialect.MySQL5InnoDBDialect] (replacing [org.hibernate.dialect.MySQL5InnoDBDialect])
+2017-09-15 16:42:21 DEBUG ServiceBinding:85 - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2017-09-15 16:42:21 DEBUG Configuration:1843 - Preparing to build session factory with filters : {}
+2017-09-15 16:42:21 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-09-15 16:42:21 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://127.0.0.1:5432/EmployeeDatabase]
+2017-09-15 16:42:21 INFO  DriverManagerConnectionProviderImpl:172 - HHH000046: Connection properties: {user=postgres, password=Postgre12@}
+2017-09-15 16:42:21 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-09-15 16:42:21 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-09-15 16:42:21 DEBUG DriverManagerConnectionProviderImpl:104 - Initializing Connection pool with 1 Connections
+2017-09-15 16:42:23 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2017-09-15 16:42:23 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2017-09-15 16:42:24 DEBUG Configuration:3805 - Processing hbm.xml files
+2017-09-15 16:42:24 DEBUG HbmBinder:355 - Mapping class: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee -> Employee
+2017-09-15 16:42:24 DEBUG HbmBinder:1374 - Mapped property: id -> id
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: employeeFirstName -> first_name
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: employeeLastName -> last_name
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: age -> age
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: lengthOfService -> length_of_service
+2017-09-15 16:42:25 DEBUG HbmBinder:355 - Mapping class: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login -> login
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: loginId -> login_id
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: username -> username
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: password -> password
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: loginTokens
+2017-09-15 16:42:25 DEBUG HbmBinder:355 - Mapping class: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken -> logintoken
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: loginTokenId -> login_token_id
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: login -> login_id
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: hashToken -> hash_token
+2017-09-15 16:42:25 DEBUG HbmBinder:1374 - Mapped property: expirationDate -> expiration_date
+2017-09-15 16:42:25 DEBUG Configuration:3835 - Process annotated classes
+2017-09-15 16:42:25 DEBUG Configuration:1484 - Processing fk mappings (*ToOne and JoinedSubclass)
+2017-09-15 16:42:25 DEBUG Configuration:1689 - Processing extends queue
+2017-09-15 16:42:25 DEBUG Configuration:1747 - Processing extends queue
+2017-09-15 16:42:25 DEBUG Configuration:1692 - Processing collection mappings
+2017-09-15 16:42:25 DEBUG CollectionSecondPass:67 - Second pass for collection: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens
+2017-09-15 16:42:25 DEBUG HbmBinder:2583 - Mapping collection: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens -> logintoken
+2017-09-15 16:42:25 DEBUG CollectionSecondPass:84 - Mapped collection key: login_id, one-to-many: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken
+2017-09-15 16:42:25 DEBUG Configuration:1702 - Processing native query and ResultSetMapping mappings
+2017-09-15 16:42:25 DEBUG Configuration:1710 - Processing association property references
+2017-09-15 16:42:25 DEBUG Configuration:1732 - Creating tables' unique integer identifiers
+2017-09-15 16:42:25 DEBUG Configuration:1733 - Processing foreign key constraints
+2017-09-15 16:42:25 DEBUG Configuration:1804 - Resolving reference to class: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login
+2017-09-15 16:42:25 DEBUG JtaPlatformInitiator:59 - No JtaPlatform was specified, checking resolver
+2017-09-15 16:42:25 DEBUG JtaPlatformResolverInitiator:50 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2017-09-15 16:42:25 DEBUG StandardJtaPlatformResolver:118 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2017-09-15 16:42:25 DEBUG SettingsFactory:122 - Automatic flush during beforeCompletion(): disabled
+2017-09-15 16:42:25 DEBUG SettingsFactory:128 - Automatic session close at end of transaction: disabled
+2017-09-15 16:42:25 DEBUG SettingsFactory:155 - Scrollable result sets: disabled
+2017-09-15 16:42:25 DEBUG SettingsFactory:161 - Wrap result sets: disabled
+2017-09-15 16:42:25 DEBUG SettingsFactory:167 - JDBC3 getGeneratedKeys(): enabled
+2017-09-15 16:42:25 DEBUG SettingsFactory:179 - multi-tenancy strategy : NONE
+2017-09-15 16:42:25 DEBUG SettingsFactory:185 - Connection release mode: auto
+2017-09-15 16:42:25 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-09-15 16:42:25 DEBUG SettingsFactory:207 - Using BatchFetchStyle : LEGACY
+2017-09-15 16:42:25 DEBUG SettingsFactory:232 - Default batch fetch size: 1
+2017-09-15 16:42:25 DEBUG SettingsFactory:238 - Generate SQL with comments: disabled
+2017-09-15 16:42:25 DEBUG SettingsFactory:244 - Order SQL updates by primary key: disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:250 - Order SQL inserts for batching: disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:258 - Default null ordering: none
+2017-09-15 16:42:26 DEBUG SettingsFactory:501 - Query translator: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory
+2017-09-15 16:42:26 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-09-15 16:42:26 DEBUG SettingsFactory:268 - Query language substitutions: {}
+2017-09-15 16:42:26 DEBUG SettingsFactory:274 - JPA-QL strict compliance: disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:282 - Second-level cache: enabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:288 - Query cache: disabled
+2017-09-15 16:42:26 DEBUG RegionFactoryInitiator:105 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2017-09-15 16:42:26 DEBUG SettingsFactory:301 - Optimize cache for minimal puts: disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:316 - Structured second-level cache entries: disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:326 - Second-level cache direct-reference entries: disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:332 - Automatic eviction of collection cache: disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:340 - Statistics: disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:346 - Deleted entity synthetic identifier rollback: disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:373 - Default entity-mode: pojo
+2017-09-15 16:42:26 DEBUG SettingsFactory:379 - Named query checking : enabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:385 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:403 - Allow initialization of lazy state outside session : : disabled
+2017-09-15 16:42:26 DEBUG SettingsFactory:413 - JTA Track by Thread: enabled
+2017-09-15 16:42:26 DEBUG SessionFactoryImpl:229 - Building session factory
+2017-09-15 16:42:27 DEBUG SessionFactoryImpl:285 - Session factory constructed with filter configurations : {}
+2017-09-15 16:42:27 DEBUG SessionFactoryImpl:286 - Instantiating session factory with properties: {java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.password=Postgre12@, sun.boot.library.path=C:\Program Files\Java\jre1.8.0_131\bin, java.vm.version=25.131-b11, hibernate.connection.username=postgres, user.country.format=BG, hibernate.temp.use_jdbc_metadata_defaults=false, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.script=, user.country=US, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\Users\martin.valchev\projects\EmployeeStats\EmployeeStatistics, java.runtime.version=1.8.0_131-b11, hibernate.jdbc.use_get_generated_keys=true, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, hibernate.current_session_context_class=thread, java.endorsed.dirs=C:\Program Files\Java\jre1.8.0_131\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\MARTIN~1.VAL\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 10, sun.jnu.encoding=Cp1252, java.library.path=C:\Program Files\Java\jre1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files (x86)\Skype\Phone\;C:\Users\martin.valchev\AppData\Local\Microsoft\WindowsApps;;C:\Users\martin.valchev\Desktop;;., java.specification.name=Java Platform API Specification, java.class.version=52.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.0, user.home=C:\Users\martin.valchev, user.timezone=Europe/Helsinki, java.awt.printerjob=sun.awt.windows.WPrinterJob, java.specification.version=1.8, file.encoding=UTF-8, hibernate.connection.driver_class=org.postgresql.Driver, show_sql=true, user.name=martin.valchev, java.class.path=C:\Users\martin.valchev\projects\EmployeeStats\EmployeeStatistics\target\classes;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\annotations-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina-ant.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina-ha.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina-storeconfig.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina-tribes.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\catalina.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\ecj-4.6.3.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\el-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\jasper-el.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\jasper.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\jaspic-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\jsp-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\servlet-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-api.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-coyote.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-dbcp.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-i18n-es.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-i18n-fr.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-i18n-ja.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-jdbc.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-jni.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-util-scan.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-util.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\tomcat-websocket.jar;C:\Users\martin.valchev\projects\tomcat8\apache-tomcat-8.5.16\lib\websocket-api.jar;C:\Users\martin.valchev\projects\EmployeeStats\EmployeeStatistics\properties;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet-core\2.16\jersey-container-servlet-core-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\external\javax.inject\2.4.0-b09\javax.inject-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\core\jersey-common\2.16\jersey-common-2.16.jar;C:\Users\martin.valchev\.m2\repository\javax\annotation\javax.annotation-api\1.2\javax.annotation-api-1.2.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\bundles\repackaged\jersey-guava\2.16\jersey-guava-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\hk2-api\2.4.0-b09\hk2-api-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\hk2-utils\2.4.0-b09\hk2-utils-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\2.4.0-b09\aopalliance-repackaged-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\hk2-locator\2.4.0-b09\hk2-locator-2.4.0-b09.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.1\osgi-resource-locator-1.0.1.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\core\jersey-server\2.16\jersey-server-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\core\jersey-client\2.16\jersey-client-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\media\jersey-media-jaxb\2.16\jersey-media-jaxb-2.16.jar;C:\Users\martin.valchev\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\martin.valchev\.m2\repository\javax\ws\rs\javax.ws.rs-api\2.0.1\javax.ws.rs-api-2.0.1.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\media\jersey-media-moxy\2.16\jersey-media-moxy-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\glassfish\jersey\ext\jersey-entity-filtering\2.16\jersey-entity-filtering-2.16.jar;C:\Users\martin.valchev\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.moxy\2.5.0\org.eclipse.persistence.moxy-2.5.0.jar;C:\Users\martin.valchev\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.core\2.5.0\org.eclipse.persistence.core-2.5.0.jar;C:\Users\martin.valchev\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.asm\2.5.0\org.eclipse.persistence.asm-2.5.0.jar;C:\Users\martin.valchev\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.antlr\2.5.0\org.eclipse.persistence.antlr-2.5.0.jar;C:\Users\martin.valchev\.m2\repository\com\owlike\genson\0.99\genson-0.99.jar;C:\Users\martin.valchev\.m2\repository\org\apache\httpcomponents\httpclient\4.5\httpclient-4.5.jar;C:\Users\martin.valchev\.m2\repository\org\apache\httpcomponents\httpcore\4.4.1\httpcore-4.4.1.jar;C:\Users\martin.valchev\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\martin.valchev\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\Users\martin.valchev\.m2\repository\postgresql\postgresql\9.1-901-1.jdbc4\postgresql-9.1-901-1.jdbc4.jar;C:\Users\martin.valchev\.m2\repository\org\hibernate\hibernate-core\4.3.11.Final\hibernate-core-4.3.11.Final.jar;C:\Users\martin.valchev\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\martin.valchev\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\martin.valchev\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\martin.valchev\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\martin.valchev\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\martin.valchev\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.5.Final\hibernate-commons-annotations-4.0.5.Final.jar;C:\Users\martin.valchev\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\martin.valchev\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;C:\Users\martin.valchev\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\martin.valchev\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar;C:\Users\martin.valchev\.m2\repository\org\quartz-scheduler\quartz\2.2.1\quartz-2.2.1.jar;C:\Users\martin.valchev\.m2\repository\c3p0\c3p0\0.9.1.1\c3p0-0.9.1.1.jar;C:\Users\martin.valchev\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar;C:\Users\martin.valchev\.m2\repository\org\quartz-scheduler\quartz-jobs\2.2.1\quartz-jobs-2.2.1.jar;C:\Users\martin.valchev\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true, java.vm.specification.version=1.8, sun.arch.data.model=64, java.home=C:\Program Files\Java\jre1.8.0_131, sun.java.command=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.schedule.JobTrigger, hibernate.connection.url=jdbc:postgresql://127.0.0.1:5432/EmployeeDatabase, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.specification.vendor=Oracle Corporation, user.language=en, user.language.format=bg, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_131, java.ext.dirs=C:\Program Files\Java\jre1.8.0_131\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.boot.class.path=C:\Program Files\Java\jre1.8.0_131\lib\resources.jar;C:\Program Files\Java\jre1.8.0_131\lib\rt.jar;C:\Program Files\Java\jre1.8.0_131\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_131\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_131\lib\jce.jar;C:\Program Files\Java\jre1.8.0_131\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_131\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_131\classes, java.vendor=Oracle Corporation, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.cpu.endian=little, sun.io.unicode.encoding=UnicodeLittle, sun.desktop=windows, sun.cpu.isalist=amd64}
+2017-09-15 16:42:27 DEBUG TypeSafeActivator:107 - Unable to acquire Bean Validation ValidatorFactory, skipping activation
+2017-09-15 16:42:27 DEBUG JaccIntegrator:90 - Skipping JACC integration as it was not enabled
+2017-09-15 16:42:27 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.PostgreSQLDialect]
+2017-09-15 16:42:27 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.PostgreSQLDialect]
+2017-09-15 16:42:27 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.PostgreSQLDialect]
+2017-09-15 16:42:31 DEBUG AbstractCollectionPersister:683 - Static SQL for collection: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens
+2017-09-15 16:42:31 DEBUG AbstractCollectionPersister:684 -  Row insert: update logintoken set login_id=? where login_token_id=?
+2017-09-15 16:42:31 DEBUG AbstractCollectionPersister:685 -  Row update: update logintoken set  where login_token_id=?
+2017-09-15 16:42:31 DEBUG AbstractCollectionPersister:686 -  Row delete: update logintoken set login_id=null where login_id=? and login_token_id=?
+2017-09-15 16:42:31 DEBUG AbstractCollectionPersister:687 -  One-shot delete: update logintoken set login_id=null where login_id=?
+2017-09-15 16:42:31 DEBUG AbstractEntityPersister:3676 - Static SQL for entity: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login
+2017-09-15 16:42:31 DEBUG AbstractEntityPersister:3681 -  Version select: select login_id from login where login_id =?
+2017-09-15 16:42:31 DEBUG AbstractEntityPersister:3684 -  Snapshot select: select login_.login_id, login_.username as username2_1_, login_.password as password3_1_ from login login_ where login_.login_id=?
+2017-09-15 16:42:31 DEBUG AbstractEntityPersister:3687 -  Insert 0: insert into login (username, password, login_id) values (?, ?, ?)
+2017-09-15 16:42:31 DEBUG AbstractEntityPersister:3688 -  Update 0: update login set username=?, password=? where login_id=?
+2017-09-15 16:42:31 DEBUG AbstractEntityPersister:3689 -  Delete 0: delete from login where login_id=?
+2017-09-15 16:42:31 DEBUG AbstractEntityPersister:3692 -  Identity insert: insert into login (username, password) values (?, ?)
+2017-09-15 16:42:32 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4221cdef]
+2017-09-15 16:42:32 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:32 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:32 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:32 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:33 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:33 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:33 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [NONE]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:33 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4cdb6859]
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:33 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:33 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:33 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:33 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [READ]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:33 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@35a66d4d]
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:33 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:33 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:33 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:33 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [UPGRADE]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=? for update
+2017-09-15 16:42:33 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1f8587f2]
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:33 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:33 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:33 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:33 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [UPGRADE_NOWAIT]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=? for update nowait 
+2017-09-15 16:42:33 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@76a7acff]
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:33 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:34 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:34 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:34 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:34 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [UPGRADE_SKIPLOCKED]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=? for update
+2017-09-15 16:42:34 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1008975b]
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:34 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:34 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:34 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:34 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [FORCE]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=? for update nowait 
+2017-09-15 16:42:34 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@40a88b14]
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:34 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:34 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:34 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:34 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [PESSIMISTIC_READ]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=? for share
+2017-09-15 16:42:34 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3e134a4b]
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:34 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:34 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:34 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:34 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [PESSIMISTIC_WRITE]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=? for update
+2017-09-15 16:42:34 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@29a10081]
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:34 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:34 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:34 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:34 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [PESSIMISTIC_FORCE_INCREMENT]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=? for update nowait 
+2017-09-15 16:42:34 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4aa6dc17]
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:34 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:34 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:34 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:34 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [OPTIMISTIC]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:34 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6804ba90]
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : username
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : password
+2017-09-15 16:42:34 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : loginTokens
+2017-09-15 16:42:34 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:34 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:34 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login)
+          - SQL table alias mapping - login0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id1_1_0_}
+
+2017-09-15 16:42:34 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login [OPTIMISTIC_FORCE_INCREMENT]: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:35 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:35 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login: select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:35 DEBUG AbstractEntityPersister:3676 - Static SQL for entity: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken
+2017-09-15 16:42:35 DEBUG AbstractEntityPersister:3681 -  Version select: select login_token_id from logintoken where login_token_id =?
+2017-09-15 16:42:35 DEBUG AbstractEntityPersister:3684 -  Snapshot select: select logintoken_.login_token_id, logintoken_.login_id as login_id2_2_, logintoken_.hash_token as hash_tok3_2_, logintoken_.expiration_date as expirati4_2_ from logintoken logintoken_ where logintoken_.login_token_id=?
+2017-09-15 16:42:35 DEBUG AbstractEntityPersister:3687 -  Insert 0: insert into logintoken (login_id, hash_token, expiration_date, login_token_id) values (?, ?, ?, ?)
+2017-09-15 16:42:35 DEBUG AbstractEntityPersister:3688 -  Update 0: update logintoken set login_id=?, hash_token=?, expiration_date=? where login_token_id=?
+2017-09-15 16:42:35 DEBUG AbstractEntityPersister:3689 -  Delete 0: delete from logintoken where login_token_id=?
+2017-09-15 16:42:35 DEBUG AbstractEntityPersister:3692 -  Identity insert: insert into logintoken (login_id, hash_token, expiration_date) values (?, ?, ?)
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5cc688df]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@41f87d57]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:35 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:35 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:35 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:35 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [NONE]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=?
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@10f8f92a]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7285f5d5]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:35 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:35 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:35 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:35 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [READ]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=?
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@41d3c6d]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2d935898]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:35 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:35 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:35 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:35 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [UPGRADE]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=? for update
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@70e52ba2]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@13a08898]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:35 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:35 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:35 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:35 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [UPGRADE_NOWAIT]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=? for update nowait 
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@244045ec]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@54027079]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:35 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:35 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:35 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:35 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [UPGRADE_SKIPLOCKED]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=? for update
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@16fd84fe]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:35 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1cb66b70]
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:35 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:35 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:35 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:36 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:36 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [FORCE]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=? for update nowait 
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3d0b801c]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4b634a8d]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:36 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:36 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:36 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:36 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [PESSIMISTIC_READ]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=? for share
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@64a1557a]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1bb7418d]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:36 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:36 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:36 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:36 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [PESSIMISTIC_WRITE]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=? for update
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4a515754]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@78b62857]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:36 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:36 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:36 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:36 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [PESSIMISTIC_FORCE_INCREMENT]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=? for update nowait 
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@59acb5e5]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1337d27b]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:36 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:36 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:36 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:36 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [OPTIMISTIC]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=?
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5a0ab4da]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4285836c]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:36 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:36 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:36 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - EntityAttributeFetchImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login, querySpaceUid=<gen:1>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken.login)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_to1_2_0_}
+
+2017-09-15 16:42:36 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken [OPTIMISTIC_FORCE_INCREMENT]: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=?
+2017-09-15 16:42:36 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=?
+2017-09-15 16:42:36 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken: select logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_id as login_id2_2_0_, logintoken0_.hash_token as hash_tok3_2_0_, logintoken0_.expiration_date as expirati4_2_0_ from logintoken logintoken0_ where logintoken0_.login_token_id=?
+2017-09-15 16:42:36 DEBUG AbstractEntityPersister:3676 - Static SQL for entity: com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee
+2017-09-15 16:42:36 DEBUG AbstractEntityPersister:3681 -  Version select: select id from Employee where id =?
+2017-09-15 16:42:36 DEBUG AbstractEntityPersister:3684 -  Snapshot select: select employee_.id, employee_.first_name as first_na2_0_, employee_.last_name as last_nam3_0_, employee_.age as age4_0_, employee_.length_of_service as length_o5_0_ from Employee employee_ where employee_.id=?
+2017-09-15 16:42:36 DEBUG AbstractEntityPersister:3687 -  Insert 0: insert into Employee (first_name, last_name, age, length_of_service, id) values (?, ?, ?, ?, ?)
+2017-09-15 16:42:36 DEBUG AbstractEntityPersister:3688 -  Update 0: update Employee set first_name=?, last_name=?, age=?, length_of_service=? where id=?
+2017-09-15 16:42:36 DEBUG AbstractEntityPersister:3689 -  Delete 0: delete from Employee where id=?
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6f8c354d]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:36 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:36 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:36 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:36 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [NONE]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=?
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2f5affdd]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:36 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:36 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:36 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:36 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [READ]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=?
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4f02e48c]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:36 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:36 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:36 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:36 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [UPGRADE]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=? for update
+2017-09-15 16:42:36 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@28ee8b52]
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:36 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:36 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:37 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:37 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:37 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [UPGRADE_NOWAIT]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=? for update nowait 
+2017-09-15 16:42:37 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6592631c]
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:37 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:37 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:37 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:37 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [UPGRADE_SKIPLOCKED]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=? for update
+2017-09-15 16:42:37 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@781db0a5]
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:37 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:37 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:37 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:37 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [FORCE]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=? for update nowait 
+2017-09-15 16:42:37 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@55e3e5ed]
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:37 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:37 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:37 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:37 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [PESSIMISTIC_READ]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=? for share
+2017-09-15 16:42:37 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4c4c513d]
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:37 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:37 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:37 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:37 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [PESSIMISTIC_WRITE]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=? for update
+2017-09-15 16:42:37 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5ac9b4ac]
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:37 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:37 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:37 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:37 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [PESSIMISTIC_FORCE_INCREMENT]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=? for update nowait 
+2017-09-15 16:42:37 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@276148e2]
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:37 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:37 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:37 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:37 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [OPTIMISTIC]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=?
+2017-09-15 16:42:37 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5f84d3f3]
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeFirstName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : employeeLastName
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : age
+2017-09-15 16:42:37 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : lengthOfService
+2017-09-15 16:42:37 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:37 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:37 DEBUG LoadPlanTreePrinter:72 - LoadPlan(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - Returns
+       - EntityReturnImpl(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee, querySpaceUid=<gen:0>, path=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2017-09-15 16:42:37 DEBUG EntityLoader:146 - Static select for entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee [OPTIMISTIC_FORCE_INCREMENT]: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=?
+2017-09-15 16:42:37 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=?
+2017-09-15 16:42:37 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee: select employee0_.id as id1_0_0_, employee0_.first_name as first_na2_0_0_, employee0_.last_name as last_nam3_0_0_, employee0_.age as age4_0_0_, employee0_.length_of_service as length_o5_0_0_ from Employee employee0_ where employee0_.id=?
+2017-09-15 16:42:38 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2e678d]
+2017-09-15 16:42:38 DEBUG QuerySpacesImpl:192 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5dfb67d0]
+2017-09-15 16:42:38 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : login
+2017-09-15 16:42:38 DEBUG MetamodelGraphWalker:162 - Property path deemed to be circular : login
+2017-09-15 16:42:38 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : hashToken
+2017-09-15 16:42:38 DEBUG MetamodelGraphWalker:154 - Visiting attribute path : expirationDate
+2017-09-15 16:42:38 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:94 - Building LoadPlan...
+2017-09-15 16:42:38 DEBUG LoadQueryJoinAndFetchProcessor:112 - processing queryspace <gen:0>
+2017-09-15 16:42:38 DEBUG LoadPlanTreePrinter:72 - LoadPlan(collection=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens)
+    - Returns
+       - CollectionReturnImpl(collection=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens, querySpaceUid=<gen:0>, path=[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken, querySpaceUid=<gen:1>, path=[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens)
+          - SQL table alias mapping - logintoken0_
+          - alias suffix - 0_
+          - suffixed key columns - {login_id2_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - login_to1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken)
+                - SQL table alias mapping - logintoken0_
+                - alias suffix - 1_
+                - suffixed key columns - {login_to1_2_1_}
+
+2017-09-15 16:42:38 DEBUG CollectionLoader:114 - Static select for collection com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens: select logintoken0_.login_id as login_id2_1_0_, logintoken0_.login_token_id as login_to1_2_0_, logintoken0_.login_token_id as login_to1_2_1_, logintoken0_.login_id as login_id2_2_1_, logintoken0_.hash_token as hash_tok3_2_1_, logintoken0_.expiration_date as expirati4_2_1_ from logintoken logintoken0_ where logintoken0_.login_id=?
+2017-09-15 16:42:38 DEBUG SessionFactoryRegistry:67 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@6220cc7b
+2017-09-15 16:42:38 DEBUG SessionFactoryRegistry:89 - Registering SessionFactory: 3d7a5ead-e326-4ed9-a09f-b2763f9b1341 (<unnamed>)
+2017-09-15 16:42:38 DEBUG SessionFactoryRegistry:96 - Not binding SessionFactory to JNDI, no JNDI name configured
+2017-09-15 16:42:38 DEBUG SessionFactoryImpl:505 - Instantiated session factory
+2017-09-15 16:42:38 DEBUG NamedQueryRepository:155 - Checking 0 named HQL queries
+2017-09-15 16:42:38 DEBUG NamedQueryRepository:171 - Checking 0 named SQL queries
+2017-09-15 16:42:38 DEBUG StatisticsInitiator:110 - Statistics initialized [enabled=false]
+2017-09-15 16:42:44 DEBUG AbstractTransactionImpl:160 - begin
+2017-09-15 16:42:44 DEBUG LogicalConnectionImpl:226 - Obtaining JDBC connection
+2017-09-15 16:42:44 DEBUG LogicalConnectionImpl:232 - Obtained JDBC connection
+2017-09-15 16:42:44 DEBUG JdbcTransaction:69 - initial autocommit status: false
+2017-09-15 16:42:46 DEBUG SQL:109 - SELECT * from logintoken
+2017-09-15 16:42:46 DEBUG Loader:952 - Result set row: 0
+2017-09-15 16:42:46 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:42:46 DEBUG Loader:952 - Result set row: 1
+2017-09-15 16:42:46 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:42:46 DEBUG Loader:952 - Result set row: 2
+2017-09-15 16:42:46 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:42:46 DEBUG Loader:952 - Result set row: 3
+2017-09-15 16:42:46 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:42:47 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:47 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:42:47 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:42:47 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:42:47 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:47 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:42:47 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:42:47 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:42:47 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:47 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:42:47 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:42:47 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:42:47 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:42:47 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:42:47 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:42:47 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166
+2017-09-15 16:42:47 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:42:47 DEBUG AbstractTransactionImpl:175 - committing
+2017-09-15 16:42:47 DEBUG AbstractFlushingEventListener:149 - Processing flush-time cascades
+2017-09-15 16:42:47 DEBUG AbstractFlushingEventListener:189 - Dirty checking collections
+2017-09-15 16:42:48 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171] (uninitialized)
+2017-09-15 16:42:48 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169] (uninitialized)
+2017-09-15 16:42:48 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172] (uninitialized)
+2017-09-15 16:42:48 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166] (uninitialized)
+2017-09-15 16:42:48 DEBUG AbstractFlushingEventListener:123 - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+2017-09-15 16:42:48 DEBUG AbstractFlushingEventListener:130 - Flushed: 0 (re)creations, 0 updates, 0 removals to 4 collections
+2017-09-15 16:42:48 DEBUG EntityPrinter:114 - Listing entities:
+2017-09-15 16:42:48 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=171, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:42:48 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=172, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169, hashToken=df2cdb7a-0f2c-4dc8-847f-ed67682dc51e, expirationDate=2017-09-15 16:27:48.653}
+2017-09-15 16:42:48 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=172, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:42:48 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=174, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171, hashToken=f572d268-754d-409d-981f-f8436c306e86, expirationDate=2017-09-15 16:44:25.941}
+2017-09-15 16:42:48 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=175, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172, hashToken=282a3b65-b82e-4a3a-bfe1-57a0be5beb2d, expirationDate=2017-09-15 16:47:50.348}
+2017-09-15 16:42:48 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=166, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:42:48 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=169, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166, hashToken=3f846f5f-fc5b-481c-b467-33e0fecdacce, expirationDate=2017-09-15 16:00:25.299}
+2017-09-15 16:42:48 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=169, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:42:48 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-09-15 16:42:48 DEBUG LogicalConnectionImpl:246 - Releasing JDBC connection
+2017-09-15 16:42:48 DEBUG LogicalConnectionImpl:264 - Released JDBC connection
+2017-09-15 16:42:52 DEBUG DriverManagerConnectionProviderImpl:120 - Connection pool now considered primed; min-size will be maintained
+2017-09-15 16:43:39 ERROR HelloJob:35 - Deleted token id: 172, tokenHashdf2cdb7a-0f2c-4dc8-847f-ed67682dc51e
+Deleted token id: 169, tokenHash3f846f5f-fc5b-481c-b467-33e0fecdacce
+
+2017-09-15 16:43:41 ERROR HelloJob:37 - no deleted elements
+2017-09-15 16:43:55 DEBUG AbstractTransactionImpl:160 - begin
+2017-09-15 16:43:55 DEBUG LogicalConnectionImpl:226 - Obtaining JDBC connection
+2017-09-15 16:43:55 DEBUG LogicalConnectionImpl:232 - Obtained JDBC connection
+2017-09-15 16:43:55 DEBUG JdbcTransaction:69 - initial autocommit status: false
+2017-09-15 16:43:55 DEBUG SQL:109 - SELECT * from logintoken
+2017-09-15 16:43:55 DEBUG Loader:952 - Result set row: 0
+2017-09-15 16:43:55 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:43:55 DEBUG Loader:952 - Result set row: 1
+2017-09-15 16:43:55 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:43:55 DEBUG Loader:952 - Result set row: 2
+2017-09-15 16:43:55 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:43:55 DEBUG Loader:952 - Result set row: 3
+2017-09-15 16:43:55 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:43:55 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:55 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:55 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:43:55 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:43:55 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:55 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:55 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:43:55 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:43:55 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:55 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:55 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:43:55 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:43:55 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:55 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:55 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:43:55 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166
+2017-09-15 16:43:55 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:43:55 DEBUG AbstractTransactionImpl:175 - committing
+2017-09-15 16:43:55 DEBUG AbstractFlushingEventListener:149 - Processing flush-time cascades
+2017-09-15 16:43:55 DEBUG AbstractFlushingEventListener:189 - Dirty checking collections
+2017-09-15 16:43:55 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171] (uninitialized)
+2017-09-15 16:43:55 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169] (uninitialized)
+2017-09-15 16:43:55 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172] (uninitialized)
+2017-09-15 16:43:55 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166] (uninitialized)
+2017-09-15 16:43:55 DEBUG AbstractFlushingEventListener:123 - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+2017-09-15 16:43:55 DEBUG AbstractFlushingEventListener:130 - Flushed: 0 (re)creations, 0 updates, 0 removals to 4 collections
+2017-09-15 16:43:55 DEBUG EntityPrinter:114 - Listing entities:
+2017-09-15 16:43:55 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=171, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:55 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=172, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169, hashToken=df2cdb7a-0f2c-4dc8-847f-ed67682dc51e, expirationDate=2017-09-15 16:27:48.653}
+2017-09-15 16:43:55 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=172, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:55 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=174, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171, hashToken=f572d268-754d-409d-981f-f8436c306e86, expirationDate=2017-09-15 16:44:25.941}
+2017-09-15 16:43:55 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=175, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172, hashToken=282a3b65-b82e-4a3a-bfe1-57a0be5beb2d, expirationDate=2017-09-15 16:47:50.348}
+2017-09-15 16:43:55 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=166, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:55 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=169, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166, hashToken=3f846f5f-fc5b-481c-b467-33e0fecdacce, expirationDate=2017-09-15 16:00:25.299}
+2017-09-15 16:43:55 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=169, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:55 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-09-15 16:43:55 DEBUG LogicalConnectionImpl:246 - Releasing JDBC connection
+2017-09-15 16:43:55 DEBUG LogicalConnectionImpl:264 - Released JDBC connection
+2017-09-15 16:43:56 DEBUG AbstractTransactionImpl:160 - begin
+2017-09-15 16:43:56 DEBUG LogicalConnectionImpl:226 - Obtaining JDBC connection
+2017-09-15 16:43:56 DEBUG LogicalConnectionImpl:232 - Obtained JDBC connection
+2017-09-15 16:43:56 DEBUG JdbcTransaction:69 - initial autocommit status: false
+2017-09-15 16:43:56 DEBUG SQL:109 - SELECT * from logintoken
+2017-09-15 16:43:56 DEBUG Loader:952 - Result set row: 0
+2017-09-15 16:43:56 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:43:56 DEBUG Loader:952 - Result set row: 1
+2017-09-15 16:43:56 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:43:56 DEBUG Loader:952 - Result set row: 2
+2017-09-15 16:43:56 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:43:56 DEBUG Loader:952 - Result set row: 3
+2017-09-15 16:43:56 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:43:56 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:56 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:56 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:43:56 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:43:56 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:56 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:56 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:43:56 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:43:56 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:56 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:56 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:43:56 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:43:56 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:56 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:56 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:43:56 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166
+2017-09-15 16:43:56 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:43:56 DEBUG AbstractTransactionImpl:175 - committing
+2017-09-15 16:43:56 DEBUG AbstractFlushingEventListener:149 - Processing flush-time cascades
+2017-09-15 16:43:56 DEBUG AbstractFlushingEventListener:189 - Dirty checking collections
+2017-09-15 16:43:56 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171] (uninitialized)
+2017-09-15 16:43:56 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169] (uninitialized)
+2017-09-15 16:43:56 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172] (uninitialized)
+2017-09-15 16:43:56 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166] (uninitialized)
+2017-09-15 16:43:56 DEBUG AbstractFlushingEventListener:123 - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+2017-09-15 16:43:56 DEBUG AbstractFlushingEventListener:130 - Flushed: 0 (re)creations, 0 updates, 0 removals to 4 collections
+2017-09-15 16:43:56 DEBUG EntityPrinter:114 - Listing entities:
+2017-09-15 16:43:56 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=171, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:56 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=172, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169, hashToken=df2cdb7a-0f2c-4dc8-847f-ed67682dc51e, expirationDate=2017-09-15 16:27:48.653}
+2017-09-15 16:43:56 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=172, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:56 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=174, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171, hashToken=f572d268-754d-409d-981f-f8436c306e86, expirationDate=2017-09-15 16:44:25.941}
+2017-09-15 16:43:56 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=175, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172, hashToken=282a3b65-b82e-4a3a-bfe1-57a0be5beb2d, expirationDate=2017-09-15 16:47:50.348}
+2017-09-15 16:43:56 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=166, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:56 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=169, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166, hashToken=3f846f5f-fc5b-481c-b467-33e0fecdacce, expirationDate=2017-09-15 16:00:25.299}
+2017-09-15 16:43:56 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=169, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:56 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-09-15 16:43:56 DEBUG LogicalConnectionImpl:246 - Releasing JDBC connection
+2017-09-15 16:43:56 DEBUG LogicalConnectionImpl:264 - Released JDBC connection
+2017-09-15 16:43:57 DEBUG AbstractTransactionImpl:160 - begin
+2017-09-15 16:43:57 DEBUG LogicalConnectionImpl:226 - Obtaining JDBC connection
+2017-09-15 16:43:57 DEBUG LogicalConnectionImpl:232 - Obtained JDBC connection
+2017-09-15 16:43:57 DEBUG JdbcTransaction:69 - initial autocommit status: false
+2017-09-15 16:43:57 DEBUG SQL:109 - SELECT * from logintoken
+2017-09-15 16:43:57 DEBUG Loader:952 - Result set row: 0
+2017-09-15 16:43:57 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:43:57 DEBUG Loader:952 - Result set row: 1
+2017-09-15 16:43:57 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:43:57 DEBUG Loader:952 - Result set row: 2
+2017-09-15 16:43:57 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:43:57 DEBUG Loader:952 - Result set row: 3
+2017-09-15 16:43:57 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:43:57 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:57 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:57 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:43:57 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:43:57 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:57 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:57 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:43:57 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:43:57 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:57 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:57 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:43:57 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:43:57 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:43:57 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:43:57 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:43:57 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166
+2017-09-15 16:43:57 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:43:57 DEBUG AbstractTransactionImpl:175 - committing
+2017-09-15 16:43:57 DEBUG AbstractFlushingEventListener:149 - Processing flush-time cascades
+2017-09-15 16:43:57 DEBUG AbstractFlushingEventListener:189 - Dirty checking collections
+2017-09-15 16:43:57 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171] (uninitialized)
+2017-09-15 16:43:57 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169] (uninitialized)
+2017-09-15 16:43:57 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172] (uninitialized)
+2017-09-15 16:43:57 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166] (uninitialized)
+2017-09-15 16:43:57 DEBUG AbstractFlushingEventListener:123 - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+2017-09-15 16:43:57 DEBUG AbstractFlushingEventListener:130 - Flushed: 0 (re)creations, 0 updates, 0 removals to 4 collections
+2017-09-15 16:43:57 DEBUG EntityPrinter:114 - Listing entities:
+2017-09-15 16:43:57 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=171, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:57 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=172, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169, hashToken=df2cdb7a-0f2c-4dc8-847f-ed67682dc51e, expirationDate=2017-09-15 16:27:48.653}
+2017-09-15 16:43:57 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=172, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:57 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=174, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171, hashToken=f572d268-754d-409d-981f-f8436c306e86, expirationDate=2017-09-15 16:44:25.941}
+2017-09-15 16:43:57 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=175, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172, hashToken=282a3b65-b82e-4a3a-bfe1-57a0be5beb2d, expirationDate=2017-09-15 16:47:50.348}
+2017-09-15 16:43:57 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=166, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:57 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=169, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166, hashToken=3f846f5f-fc5b-481c-b467-33e0fecdacce, expirationDate=2017-09-15 16:00:25.299}
+2017-09-15 16:43:57 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=169, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:43:57 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-09-15 16:43:57 DEBUG LogicalConnectionImpl:246 - Releasing JDBC connection
+2017-09-15 16:43:57 DEBUG LogicalConnectionImpl:264 - Released JDBC connection
+2017-09-15 16:44:01 ERROR HelloJob:35 - Deleted token id: 172, tokenHashdf2cdb7a-0f2c-4dc8-847f-ed67682dc51e
+Deleted token id: 169, tokenHash3f846f5f-fc5b-481c-b467-33e0fecdacce
+
+2017-09-15 16:44:01 ERROR HelloJob:37 - no deleted elements
+2017-09-15 16:44:02 ERROR HelloJob:35 - Deleted token id: 172, tokenHashdf2cdb7a-0f2c-4dc8-847f-ed67682dc51e
+Deleted token id: 169, tokenHash3f846f5f-fc5b-481c-b467-33e0fecdacce
+
+2017-09-15 16:44:02 ERROR HelloJob:37 - no deleted elements
+2017-09-15 16:44:03 DEBUG AbstractTransactionImpl:160 - begin
+2017-09-15 16:44:03 DEBUG LogicalConnectionImpl:226 - Obtaining JDBC connection
+2017-09-15 16:44:03 DEBUG LogicalConnectionImpl:232 - Obtained JDBC connection
+2017-09-15 16:44:03 DEBUG JdbcTransaction:69 - initial autocommit status: false
+2017-09-15 16:44:03 DEBUG SQL:109 - SELECT * from logintoken
+2017-09-15 16:44:03 DEBUG Loader:952 - Result set row: 0
+2017-09-15 16:44:03 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:44:03 DEBUG Loader:952 - Result set row: 1
+2017-09-15 16:44:03 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:44:03 DEBUG Loader:952 - Result set row: 2
+2017-09-15 16:44:03 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:44:03 DEBUG Loader:952 - Result set row: 3
+2017-09-15 16:44:03 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:44:03 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:44:03 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:44:03 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:44:03 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:44:03 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:44:03 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:44:03 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:44:03 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:44:03 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:44:03 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:44:03 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:44:03 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:44:03 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:44:03 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:44:03 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:44:03 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166
+2017-09-15 16:44:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:44:03 DEBUG AbstractTransactionImpl:175 - committing
+2017-09-15 16:44:03 DEBUG AbstractFlushingEventListener:149 - Processing flush-time cascades
+2017-09-15 16:44:03 DEBUG AbstractFlushingEventListener:189 - Dirty checking collections
+2017-09-15 16:44:03 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171] (uninitialized)
+2017-09-15 16:44:03 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169] (uninitialized)
+2017-09-15 16:44:03 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172] (uninitialized)
+2017-09-15 16:44:03 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166] (uninitialized)
+2017-09-15 16:44:03 DEBUG AbstractFlushingEventListener:123 - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+2017-09-15 16:44:03 DEBUG AbstractFlushingEventListener:130 - Flushed: 0 (re)creations, 0 updates, 0 removals to 4 collections
+2017-09-15 16:44:03 DEBUG EntityPrinter:114 - Listing entities:
+2017-09-15 16:44:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=171, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:44:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=172, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169, hashToken=df2cdb7a-0f2c-4dc8-847f-ed67682dc51e, expirationDate=2017-09-15 16:27:48.653}
+2017-09-15 16:44:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=172, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:44:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=174, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171, hashToken=f572d268-754d-409d-981f-f8436c306e86, expirationDate=2017-09-15 16:44:25.941}
+2017-09-15 16:44:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=175, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172, hashToken=282a3b65-b82e-4a3a-bfe1-57a0be5beb2d, expirationDate=2017-09-15 16:47:50.348}
+2017-09-15 16:44:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=166, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:44:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=169, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166, hashToken=3f846f5f-fc5b-481c-b467-33e0fecdacce, expirationDate=2017-09-15 16:00:25.299}
+2017-09-15 16:44:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=169, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:44:03 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-09-15 16:44:03 DEBUG LogicalConnectionImpl:246 - Releasing JDBC connection
+2017-09-15 16:44:03 DEBUG LogicalConnectionImpl:264 - Released JDBC connection
+2017-09-15 16:44:03 ERROR HelloJob:35 - Deleted token id: 172, tokenHashdf2cdb7a-0f2c-4dc8-847f-ed67682dc51e
+Deleted token id: 169, tokenHash3f846f5f-fc5b-481c-b467-33e0fecdacce
+
+2017-09-15 16:44:03 ERROR HelloJob:37 - no deleted elements
+2017-09-15 16:44:04 DEBUG AbstractTransactionImpl:160 - begin
+2017-09-15 16:44:04 DEBUG LogicalConnectionImpl:226 - Obtaining JDBC connection
+2017-09-15 16:44:04 DEBUG LogicalConnectionImpl:232 - Obtained JDBC connection
+2017-09-15 16:44:04 DEBUG JdbcTransaction:69 - initial autocommit status: false
+2017-09-15 16:44:04 DEBUG SQL:109 - SELECT * from logintoken
+2017-09-15 16:44:04 DEBUG Loader:952 - Result set row: 0
+2017-09-15 16:44:04 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:44:04 DEBUG Loader:952 - Result set row: 1
+2017-09-15 16:44:04 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:44:04 DEBUG Loader:952 - Result set row: 2
+2017-09-15 16:44:04 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:44:04 DEBUG Loader:952 - Result set row: 3
+2017-09-15 16:44:04 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:44:04 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:44:04 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:44:04 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:44:04 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:44:04 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:44:04 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:44:04 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:44:04 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:44:04 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:44:04 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:44:04 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:44:04 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:44:04 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:44:04 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:44:04 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:44:04 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166
+2017-09-15 16:44:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:44:04 DEBUG AbstractTransactionImpl:175 - committing
+2017-09-15 16:44:04 DEBUG AbstractFlushingEventListener:149 - Processing flush-time cascades
+2017-09-15 16:44:04 DEBUG AbstractFlushingEventListener:189 - Dirty checking collections
+2017-09-15 16:44:04 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171] (uninitialized)
+2017-09-15 16:44:04 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169] (uninitialized)
+2017-09-15 16:44:04 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172] (uninitialized)
+2017-09-15 16:44:04 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166] (uninitialized)
+2017-09-15 16:44:04 DEBUG AbstractFlushingEventListener:123 - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+2017-09-15 16:44:04 DEBUG AbstractFlushingEventListener:130 - Flushed: 0 (re)creations, 0 updates, 0 removals to 4 collections
+2017-09-15 16:44:04 DEBUG EntityPrinter:114 - Listing entities:
+2017-09-15 16:44:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=171, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:44:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=172, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169, hashToken=df2cdb7a-0f2c-4dc8-847f-ed67682dc51e, expirationDate=2017-09-15 16:27:48.653}
+2017-09-15 16:44:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=172, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:44:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=174, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171, hashToken=f572d268-754d-409d-981f-f8436c306e86, expirationDate=2017-09-15 16:44:25.941}
+2017-09-15 16:44:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=175, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172, hashToken=282a3b65-b82e-4a3a-bfe1-57a0be5beb2d, expirationDate=2017-09-15 16:47:50.348}
+2017-09-15 16:44:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=166, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:44:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=169, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166, hashToken=3f846f5f-fc5b-481c-b467-33e0fecdacce, expirationDate=2017-09-15 16:00:25.299}
+2017-09-15 16:44:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=169, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:44:04 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-09-15 16:44:04 DEBUG LogicalConnectionImpl:246 - Releasing JDBC connection
+2017-09-15 16:44:04 DEBUG LogicalConnectionImpl:264 - Released JDBC connection
+2017-09-15 16:44:04 ERROR HelloJob:35 - Deleted token id: 172, tokenHashdf2cdb7a-0f2c-4dc8-847f-ed67682dc51e
+Deleted token id: 169, tokenHash3f846f5f-fc5b-481c-b467-33e0fecdacce
+
+2017-09-15 16:44:04 ERROR HelloJob:37 - no deleted elements
+2017-09-15 16:44:06 ERROR HelloJob:35 - Deleted token id: 172, tokenHashdf2cdb7a-0f2c-4dc8-847f-ed67682dc51e
+Deleted token id: 169, tokenHash3f846f5f-fc5b-481c-b467-33e0fecdacce
+
+2017-09-15 16:44:06 ERROR HelloJob:37 - no deleted elements
+2017-09-15 16:45:03 DEBUG AbstractTransactionImpl:160 - begin
+2017-09-15 16:45:03 DEBUG LogicalConnectionImpl:226 - Obtaining JDBC connection
+2017-09-15 16:45:03 DEBUG LogicalConnectionImpl:232 - Obtained JDBC connection
+2017-09-15 16:45:03 DEBUG JdbcTransaction:69 - initial autocommit status: false
+2017-09-15 16:45:03 DEBUG SQL:109 - SELECT * from logintoken
+2017-09-15 16:45:03 DEBUG Loader:952 - Result set row: 0
+2017-09-15 16:45:03 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:45:03 DEBUG Loader:952 - Result set row: 1
+2017-09-15 16:45:03 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:45:03 DEBUG Loader:952 - Result set row: 2
+2017-09-15 16:45:03 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:45:03 DEBUG Loader:952 - Result set row: 3
+2017-09-15 16:45:03 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:45:03 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:45:03 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:45:03 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:45:03 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:45:03 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:45:03 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:45:03 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:45:03 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:45:03 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:45:03 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:45:03 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:45:03 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:45:03 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:45:03 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:45:03 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:45:03 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166
+2017-09-15 16:45:03 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:45:03 DEBUG AbstractTransactionImpl:175 - committing
+2017-09-15 16:45:03 DEBUG AbstractFlushingEventListener:149 - Processing flush-time cascades
+2017-09-15 16:45:03 DEBUG AbstractFlushingEventListener:189 - Dirty checking collections
+2017-09-15 16:45:03 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171] (uninitialized)
+2017-09-15 16:45:03 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169] (uninitialized)
+2017-09-15 16:45:03 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172] (uninitialized)
+2017-09-15 16:45:03 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166] (uninitialized)
+2017-09-15 16:45:03 DEBUG AbstractFlushingEventListener:123 - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+2017-09-15 16:45:03 DEBUG AbstractFlushingEventListener:130 - Flushed: 0 (re)creations, 0 updates, 0 removals to 4 collections
+2017-09-15 16:45:03 DEBUG EntityPrinter:114 - Listing entities:
+2017-09-15 16:45:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=171, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:45:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=172, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169, hashToken=df2cdb7a-0f2c-4dc8-847f-ed67682dc51e, expirationDate=2017-09-15 16:27:48.653}
+2017-09-15 16:45:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=172, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:45:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=174, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171, hashToken=f572d268-754d-409d-981f-f8436c306e86, expirationDate=2017-09-15 16:44:25.941}
+2017-09-15 16:45:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=175, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172, hashToken=282a3b65-b82e-4a3a-bfe1-57a0be5beb2d, expirationDate=2017-09-15 16:47:50.348}
+2017-09-15 16:45:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=166, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:45:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=169, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166, hashToken=3f846f5f-fc5b-481c-b467-33e0fecdacce, expirationDate=2017-09-15 16:00:25.299}
+2017-09-15 16:45:03 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=169, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:45:03 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-09-15 16:45:03 DEBUG LogicalConnectionImpl:246 - Releasing JDBC connection
+2017-09-15 16:45:03 DEBUG LogicalConnectionImpl:264 - Released JDBC connection
+2017-09-15 16:45:04 DEBUG AbstractTransactionImpl:160 - begin
+2017-09-15 16:45:04 DEBUG LogicalConnectionImpl:226 - Obtaining JDBC connection
+2017-09-15 16:45:04 DEBUG LogicalConnectionImpl:232 - Obtained JDBC connection
+2017-09-15 16:45:04 DEBUG JdbcTransaction:69 - initial autocommit status: false
+2017-09-15 16:45:04 DEBUG SQL:109 - SELECT * from logintoken
+2017-09-15 16:45:04 DEBUG Loader:952 - Result set row: 0
+2017-09-15 16:45:04 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:45:04 DEBUG Loader:952 - Result set row: 1
+2017-09-15 16:45:04 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:45:04 DEBUG Loader:952 - Result set row: 2
+2017-09-15 16:45:04 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:45:04 DEBUG Loader:952 - Result set row: 3
+2017-09-15 16:45:04 DEBUG Loader:1486 - Result row: EntityKey[com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:45:04 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:45:04 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:45:04 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171]
+2017-09-15 16:45:04 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#174]
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:45:04 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:45:04 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:45:04 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169]
+2017-09-15 16:45:04 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#172]
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:45:04 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:45:04 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:45:04 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172]
+2017-09-15 16:45:04 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#175]
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:45:04 DEBUG SQL:109 - select login0_.login_id as login_id1_1_0_, login0_.username as username2_1_0_, login0_.password as password3_1_0_ from login login0_ where login0_.login_id=?
+2017-09-15 16:45:04 DEBUG ResultSetProcessorImpl:127 - Starting ResultSet row #0
+2017-09-15 16:45:04 DEBUG EntityReferenceInitializerImpl:142 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:160 - Resolving associations for [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166]
+2017-09-15 16:45:04 DEBUG AbstractLoadPlanBasedEntityLoader:208 - Done entity load : com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166
+2017-09-15 16:45:04 DEBUG TwoPhaseLoad:286 - Done materializing entity [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken#169]
+2017-09-15 16:45:04 DEBUG AbstractTransactionImpl:175 - committing
+2017-09-15 16:45:04 DEBUG AbstractFlushingEventListener:149 - Processing flush-time cascades
+2017-09-15 16:45:04 DEBUG AbstractFlushingEventListener:189 - Dirty checking collections
+2017-09-15 16:45:04 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#171] (uninitialized)
+2017-09-15 16:45:04 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#169] (uninitialized)
+2017-09-15 16:45:04 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#172] (uninitialized)
+2017-09-15 16:45:04 DEBUG Collections:201 - Collection found: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166], was: [com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login.loginTokens#166] (uninitialized)
+2017-09-15 16:45:04 DEBUG AbstractFlushingEventListener:123 - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+2017-09-15 16:45:04 DEBUG AbstractFlushingEventListener:130 - Flushed: 0 (re)creations, 0 updates, 0 removals to 4 collections
+2017-09-15 16:45:04 DEBUG EntityPrinter:114 - Listing entities:
+2017-09-15 16:45:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=171, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:45:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=172, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#169, hashToken=df2cdb7a-0f2c-4dc8-847f-ed67682dc51e, expirationDate=2017-09-15 16:27:48.653}
+2017-09-15 16:45:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=172, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:45:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=174, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#171, hashToken=f572d268-754d-409d-981f-f8436c306e86, expirationDate=2017-09-15 16:44:25.941}
+2017-09-15 16:45:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=175, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#172, hashToken=282a3b65-b82e-4a3a-bfe1-57a0be5beb2d, expirationDate=2017-09-15 16:47:50.348}
+2017-09-15 16:45:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=166, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:45:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken{loginTokenId=169, login=com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login#166, hashToken=3f846f5f-fc5b-481c-b467-33e0fecdacce, expirationDate=2017-09-15 16:00:25.299}
+2017-09-15 16:45:04 DEBUG EntityPrinter:121 - com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login{password=08f5b04545cbf7eaa238621b9ab84734, loginId=169, loginTokens=<uninitialized>, username=todorv}
+2017-09-15 16:45:04 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-09-15 16:45:04 DEBUG LogicalConnectionImpl:246 - Releasing JDBC connection
+2017-09-15 16:45:04 DEBUG LogicalConnectionImpl:264 - Released JDBC connection
+2017-09-15 16:45:04 ERROR HelloJob:35 - Deleted token id: 174, tokenHashf572d268-754d-409d-981f-f8436c306e86
+Deleted token id: 172, tokenHashdf2cdb7a-0f2c-4dc8-847f-ed67682dc51e
+Deleted token id: 169, tokenHash3f846f5f-fc5b-481c-b467-33e0fecdacce
+
+2017-09-15 16:45:04 ERROR HelloJob:37 - no deleted elements
+2017-09-15 16:45:05 ERROR HelloJob:35 - Deleted token id: 174, tokenHashf572d268-754d-409d-981f-f8436c306e86
+Deleted token id: 172, tokenHashdf2cdb7a-0f2c-4dc8-847f-ed67682dc51e
+Deleted token id: 169, tokenHash3f846f5f-fc5b-481c-b467-33e0fecdacce
+
+2017-09-15 16:45:05 ERROR HelloJob:37 - no deleted elements

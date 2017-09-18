@@ -73,5 +73,29 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 		return pagesCount;
 	}
 
+	@Override
+	public List<Employee> getEmpoyeeFirstName(String firstName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> getEmpoyeeLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> getEmpoyeeAge(int age) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> getEmpoyeeLengthOfService(int lengthOfService) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

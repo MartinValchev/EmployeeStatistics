@@ -1,5 +1,6 @@
 package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.schedule;
 
+import org.quartz.CronScheduleBuilder;
 import org.quartz.JobBuilder;
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;
@@ -13,12 +14,12 @@ public class JobTrigger {
 
 	public static void main(String[] args) throws SchedulerException {
 		JobDetail job = JobBuilder.newJob(HelloJob.class).build();
-		// Trigger trigger =
+		//Trigger trigger =
 		// TriggerBuilder.newTrigger().withIdentity("SimpleTrigger").startNow().build();
-		//Trigger t1 = TriggerBuilder.newTrigger().withIdentity("CronTrigger")
-		//		.withSchedule(CronScheduleBuilder.cronSchedule("	0 0/1 * 1/1 * ? *")).build();
-		Trigger t1 = TriggerBuilder.newTrigger().withIdentity("SimpleTrigger")
-						.withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(05).repeatForever()).build();
+		Trigger t1 = TriggerBuilder.newTrigger().withIdentity("CronTrigger")
+			.withSchedule(CronScheduleBuilder.cronSchedule("	0 0/1 * 1/1 * ? *")).build();
+		//Trigger t1 = TriggerBuilder.newTrigger().withIdentity("SimpleTrigger")
+					//	.withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(05).repeatForever()).build();
 		Scheduler sc = StdSchedulerFactory.getDefaultScheduler();
 		sc.start();
 		sc.scheduleJob(job, t1);

@@ -25,7 +25,34 @@ public interface EmployeeStatisticsService {
 	 * @return Employee
 	 */
 	Employee getEmpoyee(int employeeID);
-	
+	/**
+	 * return Employee instance by provided first name
+	 * 
+	 * @param String firstName
+	 * @return Employee
+	 */
+	List<Employee> getEmpoyeeFirstName(String firstName);
+	/**
+	 * return Employee instances by provided last name
+	 * 
+	 * @param String lastName
+	 * @return List<Employee>
+	 */
+	List<Employee> getEmpoyeeLastName(String lastName);
+	/**
+	 * return list  of Employee instances by provided employee age
+	 * 
+	 * @param int age
+	 * @return List<Employee>
+	 */
+	List<Employee> getEmpoyeeAge(int age);
+	/**
+	 * return list  of Employee instances by provided employee length of service
+	 * 
+	 * @param int lengthOfService
+	 * @return List<Employee>
+	 */
+	List<Employee> getEmpoyeeLengthOfService(int lengthOfService);
 	/**
 	 * return List of Employee instances.
 	 * 

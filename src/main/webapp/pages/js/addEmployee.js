@@ -6,11 +6,48 @@ var url ="http://localhost:8080/EmployeeStatsWeb/pages/AddEmployee.html";
 		    document.cookie = "requested_page=" + url + ";" + expires + ";path=/";
 			var user_cookie = getCookie("logged_user");
 			var userElement = $("#logged_user");
-			$('#logged_user').text('welcome: '+ user_cookie);
+			$('#logged_user').text('Welcome: '+ user_cookie);
 			$('#employee-added').css('visibility','hidden');
-		    
+		function resetForm(){
+			var $firstname =  document.getElementById("employeeFirstName").value='';
+			var $lastName = document.getElementById("employeeLastName").value='';	 
+			var $age = document.getElementById("age").value='';	
+			var $lengthOfService = document.getElementById("lengthOfService").value='';
+		}	
+		function checkInput() {
+				var regex = {
+					employeeFirstName : /^[A-Z]{1}[a-z]+$/,
+					employeeLastName : /^[A-Z]{1}[a-z]+$/,
+					age : /(^18$)|(^19$)|(^[2-9]{1,2}$)/,
+					lengthOfService : /^[0-9]{1,2}\.?[0-9]{0,2}$/,
+
+				};
+				var emplFirstName = $('#employeeFirstName').val();
+				var emplLastName = $('#employeeLastName').val();
+				var age = $('#age').val();
+				var lengthOfService = $('#lengthOfService').val();
+				var errorStr ='';
+					if (!regex['employeeFirstName'].test(emplFirstName)) {
+						errorStr+="Error input employee first name \n";
+					}
+					if (!regex['employeeLastName'].test(emplLastName)) {
+						errorStr+="Error  input employee last name \n";
+					}
+					if (!regex['age'].test(age)) {
+						errorStr+="Error input employee age \n";
+					}
+					if (!regex['lengthOfService'].test(lengthOfService)) {
+						errorStr+="Error input employee length of service \n";
+					}
+					
+					return errorStr;
+			}
 		  function addEmployee (){
-		    	console.log('start');
+			  var errorString= checkInput();
+			  if(errorString.length >0){
+					alert(errorString);
+					resetForm();
+				}else{
 					var $outputContainer =$('#employee-list');
 					var $firstname =  document.getElementById("employeeFirstName").value;
 					var $lastName = document.getElementById("employeeLastName").value;		 
@@ -24,7 +61,8 @@ var url ="http://localhost:8080/EmployeeStatsWeb/pages/AddEmployee.html";
 					 	 
 					 };
 					 var emplSubmitString = JSON.stringify(emplSubmit);
-					 console.log('variable initialization completed');
+					 
+					 
 					$.ajax({
 						type:'POST',
 						contentType: 'application/json; charset=utf-8',
@@ -62,4 +100,5 @@ var url ="http://localhost:8080/EmployeeStatsWeb/pages/AddEmployee.html";
 							}
 						}
 					});
-				};
+				}
+			};

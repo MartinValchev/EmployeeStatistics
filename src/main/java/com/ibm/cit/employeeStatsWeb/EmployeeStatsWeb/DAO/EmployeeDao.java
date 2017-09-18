@@ -15,6 +15,38 @@ public interface EmployeeDao {
 	 */
 	public Employee getEmployee(int id);
 	/**
+	 * provides List of Employee instances based on employee length of service criteria
+	 * 
+	 * @param int lengthOfService
+	 * @throws @return
+	 *             List<Employee>
+	 */
+	public List<Employee> getEmployeeListLength(int lengthOfService);
+	/**
+	 * provides List of Employee instances based on employee age criteria
+	 * 
+	 * @param int age
+	 * @throws @return
+	 *             List<Employee>
+	 */
+	public List<Employee> getEmployeeListAge(int age);
+	/**
+	 * provides List of Employee instances based on employee first name criteria
+	 * 
+	 * @param String firstName
+	 * @throws @return
+	 *             List<Employee>
+	 */
+	public List<Employee> getEmployeeListFirstName(String firstName);
+	/**
+	 * provides List of Employee instances based on employee last name criteria
+	 * 
+	 * @param String lastName
+	 * @throws @return
+	 *             List<Employee>
+	 */
+	public List<Employee> getEmployeeListLastName(String lastName);
+	/**
 	 * provides List of Employee instances
 	 * 
 	 * @param
