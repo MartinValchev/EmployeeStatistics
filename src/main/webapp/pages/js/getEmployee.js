@@ -21,14 +21,16 @@ function getEmployee() {
 	var resultURL = 'http://localhost:8080/EmployeeStatsWeb/webapi/secured/employees/'
 			+ criteriaField + '=' + paramField;
 	var employeeContainer = $('#employee-info');
-
+	employeeContainer.empty();
 	
 			$.ajax({
 				type : 'GET',
 				url : resultURL,
 				statusCode : {
 					200 : function(result) {
-						$('#employee-info').empty();
+						
+						$('#pagination_list').empty();
+
 						if (result.constructor != Array) {
 							var temp = result;
 							result = [];
@@ -45,6 +47,7 @@ function getEmployee() {
 						if (result.length > pageElementsLimit) {
 							var employeeCount = result.length;
 							var listElement = $('#pagination_list');
+							$('#empl_pages_div').css('display','initial');
 							generatePageElements(employeeCount, pageElementsLimit,
 									listElement);
 							$('#page_btn_1').css('background-color','#7FE0FF');
@@ -55,7 +58,7 @@ function getEmployee() {
 						window.location.href = "http://localhost:8080/EmployeeStatsWeb/pages/login.html";
 					},
 					404 : function(response) {
-						$employeeContainer
+						employeeContainer
 								.append('No employees found matching the provided criteria');
 					}
 				},

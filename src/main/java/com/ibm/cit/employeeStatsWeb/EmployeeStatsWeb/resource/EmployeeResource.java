@@ -123,7 +123,7 @@ public class EmployeeResource {
 	}
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/first_name={first_name}")
+	@Path("/last_name={last_name}")
 	public Response getEmployeeLastName(@PathParam("last_name") String last_name) {
 		EmployeeStatisticsService statisticsService = new EmployeeStatisticsServiceImpl();
 		List<Employee> employees = statisticsService.getEmpoyeeLastName(last_name);

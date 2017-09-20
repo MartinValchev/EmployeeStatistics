@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Test HTML Validation</title>
+</head>
+<body>
+<form class="form-horizontal" id="add_empl_form">
+	<div class="form-group">
+		<label for="employeeFirstName">First Name:</label> <input
+			class="form-control" type="text" id="employeeFirstName" required
+			pattern="^[A-Z]{1}[a-z]+$">
+
+	</div>
+	<div class="form-group">
+		<label for="employeeLastName">Last Name:</label> <input
+			class="form-control" type="text" id="employeeLastName" required
+			pattern="^[A-Z]{1}[a-z]+$">
+	</div>
+	<div class="form-group">
+		<label for="age">Age:</label> <input class="form-control" type="text"
+			id="age" required pattern="(^18$)|(^19$)|(^[2-9][0-9]$)" />
+	</div>
+	<div class="form-group">
+		<label for="lengthOfService">Length of Service:</label> <input
+			class="form-control" type="text" id="lengthOfService" required
+			pattern="^[0-9]{1,2}\.[0-9]{0,2}$" />
+	</div>
+	<br /> <br />
+	<div class="form-group">
+		<button type="submit" id="add-Employee" class="btn btn-success"
+			onclick="checkInput()">Submit</button>
+	</div>
+	<select id="criteria">
+		  <option  value="empl_id">ID</option>
+		  <option  value="first_name">First Name</option>
+		  <option  value="last_name">Last Name</option>
+		  <option  value="age">Age</option>
+		  <option  value="length_of_service">Length of Service</option>
+		</select>
+		<input class="input" type="text" id="param_field" />
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+	<script src="js/test.js"></script>
+</form>
+</body>
+</html>

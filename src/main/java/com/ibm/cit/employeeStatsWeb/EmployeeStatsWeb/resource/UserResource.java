@@ -59,7 +59,7 @@ public class UserResource {
 			}
 			return response;
 		} else {
-			response = Response.status(500).build();
+			response = Response.seeOther(URI.create("http://localhost:8080/EmployeeStatsWeb/pages/login.html")).build();
 			return response;
 		}
 	}
