@@ -75,8 +75,9 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 
 	@Override
 	public List<Employee> getEmpoyeeFirstName(String firstName) {
-		// TODO Auto-generated method stub
-		return null;
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
+		List<Employee> employees = employeeDao.getEmployeeListFirstName(firstName);
+		return employees;
 	}
 
 	@Override

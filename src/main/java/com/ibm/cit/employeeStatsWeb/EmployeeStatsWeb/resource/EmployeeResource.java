@@ -63,7 +63,7 @@ public class EmployeeResource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/{employeeId}")
+	@Path("/empl_id={employeeId}")
 	public Response getEmployee(@PathParam("employeeId") int employeeId) {
 		EmployeeStatisticsService statisticsService = new EmployeeStatisticsServiceImpl();
 		Employee employee = statisticsService.getEmpoyee(employeeId);
@@ -106,17 +106,17 @@ public class EmployeeResource {
 	@Path("/first_name={first_name}")
 	public Response getEmployeeFirstName(@PathParam("first_name") String first_name) {
 		EmployeeStatisticsService statisticsService = new EmployeeStatisticsServiceImpl();
-		List<Employee> employee = statisticsService.getEmpoyeeFirstName(first_name);
+		List<Employee> employees = statisticsService.getEmpoyeeFirstName(first_name);
 		Response response = null;
-		if (employee == null) {
+		ResponseBuilder builder =null;
+		if (employees.isEmpty()) {
 			Logger log = Logger.getLogger(EmployeeResource.class);
-			log.error("Ivalid employee length of service provided");
-			response = Response.status(500).entity("Ivalid id number...").build();
+			log.error("Ivalid employee first name provided");
+			response = Response.status(404).entity("Ivalid first name...").build();
 		} else {
-			GenericEntity<Employee> entity = new GenericEntity<Employee>(employee) {
+			GenericEntity<List<Employee>> entity = new GenericEntity<List<Employee>>(employees) {
 			};
 			response = Response.status(200).entity(entity).build();
-
 		}
 
 		return response;

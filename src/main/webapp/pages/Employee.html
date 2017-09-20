@@ -3,21 +3,39 @@
 <head>
 <title>Get Employee</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+	rel="stylesheet">
 <link href="css/stylesheet-main.css" rel="stylesheet">
 <script src="js/jquery-3.2.1.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/cookieFunctions.js"></script>
-<script src="js/getEmployee.js"></script>
 <script src="js/employeeTemplate.js"></script>
 <script src="js/mustache.js"></script>
+
+<script src="js/cookieFunctions.js"></script>
 <script src="js/homePage.js"></script>
 <script src="js/logout.js"></script>
 
 </head>
 <body>
+	<template id="employees-template">
+		<li class="list-group-item">
+			<p data-id='{{id}}' style="text-align: left">
+				<strong>ID: </strong> {{id}}</p>
+			<p class="first-name">
+				<strong> First name:</strong> {{firstName}}
+			</p>
+			<p class="last-name">
+				<strong> Last name:</strong>{{lastName}}
+			</p>
+			<p class="age">
+				<strong> Age:</strong> {{age}}
+			</p>
+			<p class="length-of-service">
+				<strong> Length of service:</strong> {{lengthOfService}}
+			</p>
+		</li>
+		</template>
+	
 	<header>
 		<div class="jumbotron">
 			<h2 class="pageHeading">Employee Info</h2>
@@ -51,49 +69,31 @@
 		</div>
 	</nav>
 	</div>
-	<div class="col-sm-10">
-		<p class="info"><strong>Criteria: </strong>
+	<div class="col-sm-10" id="input_bar">
+		<strong>Criteria: </strong>
 		<select id="criteria">
+		  <option  value="empl_id">ID</option>
 		  <option  value="first_name">First Name</option>
 		  <option  value="last_name">Last Name</option>
 		  <option  value="age">Age</option>
 		  <option  value="length_of_service">Length of Service</option>
 		</select>
-</p>
-		<input class="input" type="text" id="employeeId" />
-			<button id="get-Employee" class="btn btn-success"
+		<input class="input" placeholder="insert value" type="text" id="param_field" />
+			<button  type="button" id="get-Employee" class="btn btn-success"
 				onclick="getEmployee()">Submit</button>
-			<button class="btn btn-info" type="reset" id="resetField"
-				onclick="getElementById('employeeId').value=null">Reset</button>
-
 	</div>
-	<div class="col-sm-10">
-
-		<div class="list-group" id="employee-info">
-			<ul class="list-group" id="employee">
-			</ul>
-			<template class="list-group" id='employee-template'>
-			<li class="list-group-item">
-				<p data-id='{{id}}'>
-					<strong>ID: </strong>{{id}}
-				</p>
-			</li>
-			<li class="list-group-item"><p class="first-name">
-					<strong> First name:</strong> {{firstName}}
-				</p></li>
-			<li class="list-group-item"><p class="last-name">
-					<strong> Last name:</strong>{{lastName}}
-				</p></li>
-			<li class="list-group-item"><p class="age">
-					<strong> Age:</strong> {{age}}
-				</p></li>
-			<li class="list-group-item"><p class="length-of-service">
-					<strong> Length of service:</strong> {{lengthOfService}}
-				</p></li>
-			</template>
-		</div>
-	</div>
+		<div class="container col-sm-6" id="employee-info">
+		<ul id="employees_list" class="list-group">
+		</ul>
 	
+
+	</div>
+	<div id="empl_pages_div">
+		<ul id="pagination_list" class="pagination">
+		</ul>
+	</div>	
+<script src="js/render_elements.js"></script>
+<script src="js/getEmployee.js"></script>
 
 </body>
 </html>

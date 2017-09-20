@@ -56,13 +56,13 @@ public class EmployeeDaoFileImpl implements EmployeeDao {
 	}
 
 	@Override
-	public List<Employee> getEmployeeListFirstName(String firstName) {
+	public List<Employee> getEmployeeListLastName(String lastName) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Employee> getEmployeeListLastName(String lastName) {
+	public List<Employee> getEmployeeListFirstName(String firstName) {
 		// TODO Auto-generated method stub
 		return null;
 	}
