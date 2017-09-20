@@ -89,8 +89,9 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 
 	@Override
 	public List<Employee> getEmpoyeeAge(int age) {
-		// TODO Auto-generated method stub
-		return null;
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
+		List<Employee> employees = employeeDao.getEmployeeListAge(age);
+		return employees;
 	}
 
 	@Override

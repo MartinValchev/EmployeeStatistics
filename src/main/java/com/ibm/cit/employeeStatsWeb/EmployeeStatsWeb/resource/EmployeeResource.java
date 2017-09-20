@@ -141,6 +141,26 @@ public class EmployeeResource {
 
 		return response;
 	}
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/age={age}")
+	public Response getEmployeeAge(@PathParam("age") String age) {
+		EmployeeStatisticsService statisticsService = new EmployeeStatisticsServiceImpl();
+		List<Employee> employees = statisticsService.getEmpoyeeAge(Integer.parseInt(age));
+		Response response = null;
+		ResponseBuilder builder =null;
+		if (employees.isEmpty()) {
+			Logger log = Logger.getLogger(EmployeeResource.class);
+			log.error("Ivalid employee age provided");
+			response = Response.status(404).entity("Ivalid age...").build();
+		} else {
+			GenericEntity<List<Employee>> entity = new GenericEntity<List<Employee>>(employees) {
+			};
+			response = Response.status(200).entity(entity).build();
+		}
+
+		return response;
+	}
 	@POST
 	@Path("/add")
 	@Produces(MediaType.APPLICATION_JSON)

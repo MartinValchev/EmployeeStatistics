@@ -58,6 +58,7 @@ function getEmployee() {
 						window.location.href = "http://localhost:8080/EmployeeStatsWeb/pages/login.html";
 					},
 					404 : function(response) {
+						$('#pagination_list').empty();
 						employeeContainer
 								.append('No employees found matching the provided criteria');
 					}
