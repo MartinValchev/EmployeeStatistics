@@ -43,11 +43,7 @@ public class EmployeeDaoFileImpl implements EmployeeDao {
 		return 0;
 	}
 
-	@Override
-	public List<Employee> getEmployeeListLength(int lengthOfService) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 	@Override
 	public List<Employee> getEmployeeListAge(int age) {
@@ -63,6 +59,12 @@ public class EmployeeDaoFileImpl implements EmployeeDao {
 
 	@Override
 	public List<Employee> getEmployeeListFirstName(String firstName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> getEmployeeListLength(double lengthOfService) {
 		// TODO Auto-generated method stub
 		return null;
 	}

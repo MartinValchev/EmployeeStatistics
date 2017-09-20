@@ -17,11 +17,11 @@ public interface EmployeeDao {
 	/**
 	 * provides List of Employee instances based on employee length of service criteria
 	 * 
-	 * @param int lengthOfService
+	 * @param double lengthOfService
 	 * @throws @return
 	 *             List<Employee>
 	 */
-	public List<Employee> getEmployeeListLength(int lengthOfService);
+	public List<Employee> getEmployeeListLength(double lengthOfService);
 	/**
 	 * provides List of Employee instances based on employee age criteria
 	 * 

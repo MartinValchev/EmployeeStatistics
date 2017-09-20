@@ -95,9 +95,10 @@ public class EmployeeStatisticsServiceImpl implements EmployeeStatisticsService 
 	}
 
 	@Override
-	public List<Employee> getEmpoyeeLengthOfService(int lengthOfService) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Employee> getEmpoyeeLengthOfService(double lengthOfService) {
+		EmployeeDao employeeDao = new EmployeeDaoDBImpl();
+		List<Employee> employees = employeeDao.getEmployeeListLength(lengthOfService);
+		return employees;
 	}
 
 

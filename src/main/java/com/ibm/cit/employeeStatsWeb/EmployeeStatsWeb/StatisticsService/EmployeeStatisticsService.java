@@ -49,14 +49,14 @@ public interface EmployeeStatisticsService {
 	/**
 	 * return list  of Employee instances by provided employee length of service
 	 * 
-	 * @param int lengthOfService
+	 * @param double lengthOfService
 	 * @return List<Employee>
 	 */
-	List<Employee> getEmpoyeeLengthOfService(int lengthOfService);
+	List<Employee> getEmpoyeeLengthOfService(double lengthOfService);
 	/**
 	 * return List of Employee instances.
 	 * 
-	 * @param
+	 * @param 
 	 * @return List<Employee>
 	 */
 	List<Employee> getEmployees();
