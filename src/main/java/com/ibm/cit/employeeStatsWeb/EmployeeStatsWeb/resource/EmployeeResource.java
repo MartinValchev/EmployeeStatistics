@@ -121,7 +121,26 @@ public class EmployeeResource {
 
 		return response;
 	}
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/first_name={first_name}")
+	public Response getEmployeeLastName(@PathParam("last_name") String last_name) {
+		EmployeeStatisticsService statisticsService = new EmployeeStatisticsServiceImpl();
+		List<Employee> employees = statisticsService.getEmpoyeeLastName(last_name);
+		Response response = null;
+		ResponseBuilder builder =null;
+		if (employees.isEmpty()) {
+			Logger log = Logger.getLogger(EmployeeResource.class);
+			log.error("Ivalid employee last name provided");
+			response = Response.status(404).entity("Ivalid last name...").build();
+		} else {
+			GenericEntity<List<Employee>> entity = new GenericEntity<List<Employee>>(employees) {
+			};
+			response = Response.status(200).entity(entity).build();
+		}
 
+		return response;
+	}
 	@POST
 	@Path("/add")
 	@Produces(MediaType.APPLICATION_JSON)
