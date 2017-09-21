@@ -1,13 +1,11 @@
 package com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.DAO;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Login;
@@ -15,15 +13,15 @@ import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.LoginToken;
 
 public class LoginDaoDBImpl implements LoginDao {
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Login getUser(String userName, String password) {
 		Transaction tx = null;
-		//Session session = null;
+		Session session = null;
 		List<Login> results = null;
 		Login user = null;
 		try {
-			SessionFactory sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			Session session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
 			String userQuery = "select * from login where username=" + '\'' + userName + '\'' + " AND password=" + '\''
 					+ password + '\'';
@@ -38,10 +36,9 @@ public class LoginDaoDBImpl implements LoginDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			e.printStackTrace();
-		} finally {
-			//session.close();
-		}
+			addLogging(e.toString());
+			SessionFactoryGenerator.shutdown();
+		} 
 		return user;
 	}
 
@@ -51,6 +48,7 @@ public class LoginDaoDBImpl implements LoginDao {
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public LoginToken getLoginToken(String token) {
 		Transaction tx = null;
@@ -61,9 +59,7 @@ public class LoginDaoDBImpl implements LoginDao {
 		tokenQuery = (token.length() == 0) ? "SELECT * from logintoken order by expiration_date desc limit 1"
 				: "select * from \"logintoken\" where hash_token=\'" + token + '\'';
 		try {
-			SessionFactory sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			//session = sf.openSession();
-			session= sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
 			SQLQuery query = session.createSQLQuery(tokenQuery);
 			query.addEntity(LoginToken.class);
@@ -78,8 +74,7 @@ public class LoginDaoDBImpl implements LoginDao {
 			if (tx != null)
 				tx.rollback();
 			addLogging(e.toString());
-		} finally {
-			//session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 		return loginToken;
 	}
@@ -87,6 +82,7 @@ public class LoginDaoDBImpl implements LoginDao {
 		Logger log = Logger.getLogger(EmployeeDaoDBImpl.class);
 		log.error(message);
 	}
+	@SuppressWarnings("unchecked")
 	@Override
 	public int getUserId(String username) {
 		Transaction tx = null;
@@ -94,9 +90,7 @@ public class LoginDaoDBImpl implements LoginDao {
 		List<Object> results = null;
 		int userId = 0;
 		try {
-			SessionFactory sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			//session = sf.openSession();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
 			String userQuery = "select id from login where username=\'" + username + "\'";
 			SQLQuery query = session.createSQLQuery(userQuery);
@@ -111,8 +105,7 @@ public class LoginDaoDBImpl implements LoginDao {
 			if (tx != null)
 				tx.rollback();
 			addLogging(e.toString());
-		} finally {
-			//session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 		return userId;
 
@@ -122,12 +115,9 @@ public class LoginDaoDBImpl implements LoginDao {
 	public void addLoginToken(LoginToken loginToken, Login login) {
 		Transaction tx = null;
 		Session session = null;
-		SessionFactory sf = null;
 
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			//session = sf.openSession();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
 			session.saveOrUpdate(login);
 			loginToken.setLogin(login);
@@ -140,8 +130,7 @@ public class LoginDaoDBImpl implements LoginDao {
 			if (tx != null)
 				tx.rollback();
 			addLogging(e.toString());
-		} finally {
-			//session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 
 	}
@@ -150,13 +139,10 @@ public class LoginDaoDBImpl implements LoginDao {
 	public void deleteLoginToken(List<LoginToken> tokens) {
 		Transaction tx = null;
 		Session session = null;
-		SessionFactory sf = null;
 		
 
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			//session = sf.openSession();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
 			for(LoginToken token: tokens) {
 				Login login = token.getLogin();
@@ -171,14 +157,12 @@ public class LoginDaoDBImpl implements LoginDao {
 			if (tx != null)
 				tx.rollback();
 			addLogging(e.toString());
-		} finally {
-			//session.close();
-			//sf.close();
-		}
-
+			SessionFactoryGenerator.shutdown();
+		} 
 		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<LoginToken> getAllLoginTokens() {
 		Transaction tx = null;
@@ -188,9 +172,7 @@ public class LoginDaoDBImpl implements LoginDao {
 		tokenQuery = "SELECT * from logintoken";
 			
 		try {
-			SessionFactory sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			//session = sf.openSession();
-			session= sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
 			SQLQuery query = session.createSQLQuery(tokenQuery);
 			query.addEntity(LoginToken.class);
@@ -201,8 +183,7 @@ public class LoginDaoDBImpl implements LoginDao {
 			if (tx != null)
 				tx.rollback();
 			addLogging(e.toString());
-		} finally {
-			//session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 		return results;
 	}

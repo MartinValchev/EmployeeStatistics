@@ -6,24 +6,22 @@ import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.ibm.cit.employeeStatsWeb.EmployeeStatsWeb.model.Employee;
 
 public class EmployeeDaoDBImpl implements EmployeeDao {
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Employee getEmployee(int id) {
 		Transaction tx = null;
 		Session session = null;
 		List<Employee> results = null;
-		SessionFactory sf = null;
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
-			String employeeQuerry = "SELECT * FROM Employee where id= " +id;
+			String employeeQuerry = "SELECT * FROM Employee where id= " + id;
 			SQLQuery query = session.createSQLQuery(employeeQuerry);
 			query.addEntity(Employee.class);
 			results = query.list();
@@ -32,12 +30,11 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			String errorMessage =e.toString();
+			String errorMessage = e.toString();
 			addLogging(errorMessage);
-		} finally {
-			// session.close();
+			SessionFactoryGenerator.shutdown();
 		}
-		Employee employee =(results==null)?null:results.get(0);
+		Employee employee = (results == null) ? null : results.get(0);
 		return employee;
 	}
 
@@ -48,15 +45,13 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		return employeeList;
 	}
 
+	@SuppressWarnings("unchecked")
 	private List<Employee> getHibernateEmployeeList() {
 		Transaction tx = null;
 		Session session = null;
 		List<Employee> results = null;
-		SessionFactory sf = null;
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			// session = sf.openSession();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
 			String allContactsQuery = "select * FROM Employee";
 			SQLQuery query = session.createSQLQuery(allContactsQuery);
@@ -67,10 +62,9 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			String errorMessage =e.toString();
+			String errorMessage = e.toString();
 			addLogging(errorMessage);
-		} finally {
-			// session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 		return results;
 	}
@@ -78,13 +72,10 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 	public Employee addEmployee(Employee employee) {
 		Transaction tx = null;
 		Session session = null;
-		SessionFactory sf = null;
 		Employee currentEmpl = null;
 		try {
 
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			// session = sf.openSession();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
 			session.save(employee);
 			if (!tx.wasCommitted()) {
@@ -94,50 +85,55 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			String errorMessage =e.toString();
+			String errorMessage = e.toString();
 			addLogging(errorMessage);
-		} finally {
-			// session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 		return currentEmpl;
 
 	}
 
+	@SuppressWarnings("unchecked")
 	private Employee getNewlyCreatedEmployee() {
 		Transaction tx = null;
 		Session session = null;
-		SessionFactory sf = null;
 		List<Employee> results = null;
-		sf = SessionFactoryGenerator.getSessionFactoryInstance();
-		session = sf.getCurrentSession();
-		tx = session.beginTransaction();
-		String allContactsQuery = "SELECT * FROM Employee ORDER BY ID DESC limit 1";
-		SQLQuery query = session.createSQLQuery(allContactsQuery);
+		try {
 
-		query.addEntity(Employee.class);
-		results = query.list();
-		if (!tx.wasCommitted()) {
-			tx.commit();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
+			tx = session.beginTransaction();
+			String allContactsQuery = "SELECT * FROM Employee ORDER BY ID DESC limit 1";
+			SQLQuery query = session.createSQLQuery(allContactsQuery);
+
+			query.addEntity(Employee.class);
+			results = query.list();
+		} catch (HibernateException e) {
+			if (!tx.wasCommitted()) {
+				tx.commit();
+				String errorMessage = e.toString();
+				addLogging(errorMessage);
+				SessionFactoryGenerator.shutdown();
+			}
 		}
-
 		return results.get(0);
 	}
+
 	private void addLogging(String message) {
 		Logger log = Logger.getLogger(EmployeeDaoDBImpl.class);
 		log.error(message);
 	}
+
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Employee> getPortionEmployeeList(int offset, int limit) {
 		Transaction tx = null;
 		Session session = null;
 		List<Employee> results = null;
-		SessionFactory sf = null;
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
-			String portionContactsQuery = "SELECT * FROM Employee ORDER BY id Asc OFFSET " + offset + " ROWS FETCH NEXT "
-					+ limit + " ROWS ONLY";
+			String portionContactsQuery = "SELECT * FROM Employee ORDER BY id Asc OFFSET " + offset
+					+ " ROWS FETCH NEXT " + limit + " ROWS ONLY";
 			SQLQuery query = session.createSQLQuery(portionContactsQuery);
 			query.addEntity(Employee.class);
 			results = query.list();
@@ -146,24 +142,22 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			String errorMessage =e.toString();
+			String errorMessage = e.toString();
 			addLogging(errorMessage);
-		} finally {
-			// session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 		return results;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public int getAllEmployeesCount() {
 		Transaction tx = null;
 		Session session = null;
 		List<Object> results = null;
-		SessionFactory sf = null;
 		int employeeList = 0;
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
 			String portionContactsQuery = "SELECT COUNT(*) FROM employee";
 			SQLQuery query = session.createSQLQuery(portionContactsQuery);
@@ -175,25 +169,23 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			String errorMessage =e.toString();
+			String errorMessage = e.toString();
 			addLogging(errorMessage);
-		} finally {
-			// session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 		return employeeList;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Employee> getEmployeeListLength(double lengthOfService) {
 		Transaction tx = null;
 		Session session = null;
 		List<Employee> results = null;
-		SessionFactory sf = null;
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
-			String employeeQuerry = "SELECT * FROM Employee where length_of_service ="+lengthOfService;
+			String employeeQuerry = "SELECT * FROM Employee where length_of_service =" + lengthOfService;
 			SQLQuery query = session.createSQLQuery(employeeQuerry);
 			query.addEntity(Employee.class);
 			results = query.list();
@@ -202,25 +194,23 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			String errorMessage =e.toString();
+			String errorMessage = e.toString();
 			addLogging(errorMessage);
-		} finally {
-			// session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 		return results;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Employee> getEmployeeListAge(int age) {
 		Transaction tx = null;
 		Session session = null;
 		List<Employee> results = null;
-		SessionFactory sf = null;
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
-			String employeeQuerry = "SELECT * FROM Employee where age ="+age;
+			String employeeQuerry = "SELECT * FROM Employee where age =" + age;
 			SQLQuery query = session.createSQLQuery(employeeQuerry);
 			query.addEntity(Employee.class);
 			results = query.list();
@@ -229,25 +219,23 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			String errorMessage =e.toString();
+			String errorMessage = e.toString();
 			addLogging(errorMessage);
-		} finally {
-			// session.close();
-		}
+			SessionFactoryGenerator.shutdown();
+		} 
 		return results;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Employee> getEmployeeListFirstName(String firstName) {
 		Transaction tx = null;
 		Session session = null;
 		List<Employee> results = null;
-		SessionFactory sf = null;
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
-			String employeeQuerry = "SELECT * FROM Employee where first_name like '"+firstName+"%'";
+			String employeeQuerry = "SELECT * FROM Employee where first_name like '" + firstName + "%'";
 			SQLQuery query = session.createSQLQuery(employeeQuerry);
 			query.addEntity(Employee.class);
 			results = query.list();
@@ -256,25 +244,23 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			String errorMessage =e.toString();
+			String errorMessage = e.toString();
 			addLogging(errorMessage);
-		} finally {
-			// session.close();
+			SessionFactoryGenerator.shutdown();
 		}
 		return results;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Employee> getEmployeeListLastName(String lastName) {
 		Transaction tx = null;
 		Session session = null;
 		List<Employee> results = null;
-		SessionFactory sf = null;
 		try {
-			sf = SessionFactoryGenerator.getSessionFactoryInstance();
-			session = sf.getCurrentSession();
+			session = SessionFactoryGenerator.getSessionFactory().openSession();
 			tx = session.beginTransaction();
-			String employeeQuerry = "SELECT * FROM Employee where last_name like '"+lastName+"%'";
+			String employeeQuerry = "SELECT * FROM Employee where last_name like '" + lastName + "%'";
 			SQLQuery query = session.createSQLQuery(employeeQuerry);
 			query.addEntity(Employee.class);
 			results = query.list();
@@ -283,11 +269,10 @@ public class EmployeeDaoDBImpl implements EmployeeDao {
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();
-			String errorMessage =e.toString();
+			String errorMessage = e.toString();
 			addLogging(errorMessage);
-		} finally {
-			// session.close();
-		}
+			SessionFactoryGenerator.shutdown();
+		} 
 		return results;
 	}
 
